@@ -1,0 +1,90 @@
+// Brand partial
+
+.c-brand {
+    &__logo {
+        a {
+            font-family: $bellarina-font-family;
+            @extend .u-relative;
+            @extend .u-display-in-block;
+        }
+        span {
+            font-family: $applesymbols-font-family;
+            font-weight: $weight-medium;
+            @extend .u-txt-uppercase;
+        }
+    }
+
+    &--header {
+        z-index: 20;
+        @extend .u-fixed;
+        @extend .u-top-0;
+        &__inner {
+            @extend .u-translate-y50;
+            @include breakpoint(md) {
+                top: $smallick-grid-width-100 / 2.17;
+                @include translateY(-$smallick-grid-width-100 / 2.17);
+            }
+        }
+        &__logo {
+            a {
+                font-size: $font-size-global + 11;
+
+                &:before,
+                &:after {
+                    background-color: $white-rgba;
+                    content: "";
+                    height: $all-zero + 1;
+                    @extend .u-left-0;
+                    @extend .u-absolute;
+                }
+                &:before {
+                    width: $all-zero + 30;
+                    top: $all-zero - 15;
+                }
+                &:after {
+                    width: $all-zero + 15;
+                    bottom: $all-zero - 10;
+                    @include breakpoint(md) {
+                        bottom: $all-zero - 26;
+                    }
+                }
+                span {
+                    @extend .u-left-0;
+                    @extend %u-opacity-0;
+                    @extend .u-absolute;
+                    @extend .u-display-none;
+                    @extend .u-transition-500;
+                    bottom: $all-zero - 14;
+                    letter-spacing: $all-zero + 4;
+                    font-size: $font-size-global - 2;
+                    line-height: $font-size-global + 2;
+                    @include breakpoint(md) {
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+                @include breakpoint(sm) {
+                    font-size: $font-size-global * 2 + 3;
+                }
+                @include breakpoint(md) {
+                    font-size: $font-size-global * 3 - 3;
+                }
+            }
+        }
+    }
+    &--footer {
+        &__logo {
+            a {
+                font-size: $font-size-global * 2 + 3;
+            }
+            span {
+                color: $white-rgba-solid-darken-70;
+                letter-spacing: $all-zero + 5;
+                top: $all-zero - 2;
+                @extend .u-display-block;
+                @extend .u-relative;
+            }
+        }
+    }
+}
+

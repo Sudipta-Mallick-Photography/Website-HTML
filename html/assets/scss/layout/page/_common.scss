@@ -1,0 +1,211 @@
+// Common section partial
+
+// common donate box area
+.o-donate-area {
+    @extend .u-oflowhidden;
+}
+.o-donate-box {
+    //margin-top: $all-zero + 30;
+    margin-right: $all-zero;
+    margin-left: $all-zero;
+    z-index: 6;
+    @extend .u-relative;
+    @extend .u-bg-norepeat;
+    @extend .u-bg-pos-center-middle;
+    @extend .u-bg-cover;
+    @include breakpoint(md) {
+        //margin-top: $all-zero + 60;
+    }
+    h2 {
+        //@extend .u-no-bot-margin;
+        font-weight: $weight-bold;
+        margin-bottom: $all-zero + 25;
+    }
+    h3 {
+        @extend .u-no-top-margin;
+    }
+    &__inner {
+        z-index: 6;
+        @extend .u-relative;
+        section {
+            padding: $all-zero + 30 $all-zero;
+            width: $smallick-grid-width-100;
+            @extend .u-block-elm-center;
+            @extend .u-display-block;
+            @extend .u-txtalign-center;
+            @include breakpoint(xxs) {
+                padding: $all-zero + 30;
+            }
+            @include breakpoint(md) {
+                display: table;
+                padding: $all-zero;
+                text-align: left;
+            }
+        }
+    }
+    &__left,
+    &__right {
+        //@extend .u-valign-middle-inner;
+        //@extend .u-no-float;
+        @include breakpoint(md) {
+            display: table-cell;
+            float: none;
+            vertical-align: middle;
+        }
+    }
+    &__left {
+        &__inner {
+            padding: $all-zero $all-zero $all-zero + 25;
+            @include breakpoint(md) {
+                padding: $all-zero + 70 $all-zero $all-zero + 60 $all-zero + 25;
+            }
+        }
+    }
+}
+
+
+
+// inner pages general content area
+.o-gen-content {
+    min-height: $all-zero + 500;
+    @extend .u-cmn-padding;
+    .content-styled {
+        line-height: $line-height-global;
+    }
+    .o-form--membership {
+        margin-top: $all-zero + 110;
+        margin-bottom: $all-zero + 35;
+    }
+    h2, .h2 {
+        line-height: $line-height-global * 1.3;
+    }
+    figure {
+        &.wp-block-image {
+            @extend .u-no-bot-margin;
+        }
+    }
+    .c-blog--single {
+        figure {
+            &.wp-block-image {
+                margin-bottom: $all-zero + 30 !important;
+            }
+        }
+    }
+}
+
+.o-txt-cont {
+    p {
+        margin-bottom: $all-zero + 25;
+    }
+}
+
+
+// meta style
+.c-meta--style {
+    font-size: $font-size-global - 3;
+    font-weight: $weight-semibold;
+    svg {
+        height: $all-zero + 22;
+        margin-right: $all-zero + 10;
+        width: $all-zero + 22;
+        @extend .u-display-in-block;
+        @extend .u-txt-valign-middle;
+    }
+}
+
+
+
+
+// large icon assets
+.o-lrg-icon-assets {
+    z-index: 5;
+    @extend .u-absolute;
+    @extend .u-display-block;
+    &:before {
+        @extend .u-display-block;
+    }
+    img {
+        @extend .u-display-block;
+        @extend .u-width-100;
+    }
+    &--bowl1 {
+        bottom: $all-zero - 25;
+        right: $all-zero + 295;
+        z-index: 8;
+    }
+    &--bowl2 {
+        top: $all-zero + 45;
+        @extend .u-left-0;
+        // opacity: 0.25;
+    }
+    &--bowl3 {
+        right: $all-zero + 20;
+        top: $all-zero - 45;
+    }
+    &--bowl4 {
+        right: $all-zero + 25;
+        bottom: $all-zero - 200;
+    }
+    &--puzzle {
+        right: $all-zero - 115;
+        @extend .u-translate-y50;
+    }
+}
+
+
+
+
+// listing post area
+.o-recent-posts {
+    // margin-bottom: $all-zero + 85;
+}
+.o-list-posts {
+    article {
+        margin-bottom: $all-zero + 25;
+        @extend .u-oflowhidden;
+
+        &:last-child {
+            @extend .u-no-bot-margin;
+        }
+        a {
+            color: $gray;
+            &:hover {
+                color: $gray-darker;
+            }
+        }
+        time {
+            color: $brand-primary;
+            font-size: $font-size-global - 3;
+            font-weight: $weight-medium;
+            margin-bottom: $all-zero + 6;
+            @extend .u-display-block;
+        }
+    }
+    &--with-img {
+        figure {
+            height: $all-zero + 75;
+            margin-right: $all-zero + 20;
+            width: $all-zero + 85;
+            z-index: 5;
+            @extend .u-relative;
+            @extend .u-float-left;
+            @extend .u-display-block;
+            a, img {
+                @extend .u-width-100;
+                @extend .u-height-100;
+                @extend .u-display-block;
+            }
+            img {
+                @extend .u-objfit-cover;
+                @extend .u-obj-pos-center-middle;
+            }
+        }
+    }
+    &--with-border {
+        article {
+            border-bottom: $gray-mid dotted $all-zero + 1;
+            margin-bottom: $all-zero + 14;
+        }
+    }
+}
+

@@ -1,0 +1,70 @@
+// All social icons partial
+
+.c-social {
+    font-size: $font-size-global + 4;
+    @extend .u-no-bot-margin;
+    li {
+        margin: $all-zero $all-zero + 10;
+        @extend .u-display-in-block;
+        &:first-child {
+            @extend .u-no-left-margin;
+        }
+        &:last-child {
+            @extend .u-no-right-margin;
+        }
+        a {
+
+            svg {
+                width: $font-size-global + 4;
+                top: $all-zero + 3;
+                @extend .u-relative;
+            }
+        }
+    }
+    &--dark {
+        li {
+            a {
+                color: $black-rgba-solid-lighten-60;
+                &:hover {
+                    color: $white-rgba;
+                    svg {
+                        fill: $white-rgba;
+                    }
+                }
+                svg {
+                    fill: $black-rgba-solid-lighten-60;
+                }
+            }
+        }
+    }
+    &--light {
+        li {
+            a {
+                color: $black-rgba-solid-lighten-40;
+                &:hover {
+                    color: $black-rgba;
+                    svg {
+                        fill: $black-rgba;
+                    }
+                }
+                svg {
+                    fill: $black-rgba-solid-lighten-40;
+                }
+            }
+        }
+    }
+    &--home {
+        padding-bottom: $font-size-global * 2;
+    }
+    &--header {
+
+    }
+    &--footer {
+        margin-top: $font-size-global + 4;
+        @include breakpoint(sm) {
+            margin-top: $all-zero;
+        }
+    }
+}
+
+

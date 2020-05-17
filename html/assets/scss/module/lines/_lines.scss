@@ -1,0 +1,87 @@
+// All lines partial
+
+.c-line {
+    a {
+        @extend .u-relative;
+        &:before {
+            content: "";
+            height: $all-zero + 1;
+            width: $all-zero + 2;
+            @extend %u-opacity-0;
+            @extend .u-absolute;
+        }
+        &:hover {
+            &:before {
+               @extend %u-opacity-1;
+               @extend .u-width-100;
+            }
+        }
+    }
+    &--over {
+        a {
+            &:before {
+
+            }
+        }
+    }
+    &--under {
+        a {
+            &:before {
+                //@extend .u-bot-0;
+                bottom: $all-zero + 5;
+            }
+        }
+    }
+    &--dark {
+        a {
+            &:before {
+                background-color: $white-rgba;
+            }
+        }
+    }
+    &--light {
+        a {
+            &:before {
+
+            }
+        }
+    }
+    &--left {
+        a {
+           &:before {
+                @extend .u-left-0;
+            }
+            // &:hover {
+            //     &:before {
+            //         @extend .u-right-0;
+            //     }
+            // }
+        }
+    }
+    &--center {
+        a {
+           &:before {
+                @extend .u-left-50;
+            }
+            &:hover {
+                &:before {
+                    @extend .u-right-0;
+                    @extend .u-left-0;
+                }
+            }
+        }
+    }
+    &--right {
+        a {
+            &:before {
+                @extend .u-right-0;
+            }
+            // &:hover {
+            //     &:before {
+            //        @extend .u-left-0;
+            //     }
+            // }
+        }
+    }
+}
+

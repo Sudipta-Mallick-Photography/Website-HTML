@@ -1,0 +1,470 @@
+// utility all partial
+
+.u-allign-mid-all {
+    @include allign-middle-all;
+}
+.u-allign-mid-v {
+    @include vertical-align;
+}
+.u-allign-mid-h {
+    @include horizontal-align;
+}
+
+
+// dimension
+.u-width-100 {
+    max-width: $smallick-grid-width-100;
+    width: $smallick-grid-width-100;
+}
+
+.u-height-100 {
+    height: $smallick-grid-height-100;
+}
+
+.u-height-100vh {
+    height: $smallick-grid-height-100vh;
+}
+
+
+// alignment
+.u-valign-middle {
+    display: table;
+    margin: $all-zero auto;
+    width: $smallick-grid-width-100;
+    .u-valign-middle-inner {
+        display: table-cell;
+        float: none;
+        vertical-align: middle;
+    }
+}
+
+// no float
+.u-no-float {
+    float: none;
+}
+
+// float
+.u-float-left {
+    float: left;
+}
+.u-float-right {
+    float: right;
+}
+
+
+// block element alignment
+.u-block-elm-center {
+    margin: $all-zero auto;
+}
+
+
+// display
+.u-display-block {
+    display: block;
+}
+.u-display-in-block {
+    display: inline-block;
+}
+.u-display-none {
+    display: none;
+}
+
+// valign
+.u-txt-valign-middle {
+    vertical-align: middle;
+}
+.u-txt-valign-top {
+    vertical-align: top;
+}
+
+
+// background image styles
+
+// cover / contain
+.u-bg-cover {
+    background-size: cover;
+}
+.u-bg-contain {
+    background-size: contain;
+}
+
+// positions
+.u-bg-pos-center-middle {
+    background-position: $smallick-grid-width-100 / 2 $smallick-grid-width-100 / 2;
+}
+.u-bg-pos-left-middle {
+    background-position: 0 $smallick-grid-width-100 / 2;
+}
+.u-bg-pos-bottom-right {
+    background-position: $smallick-grid-width-100  $smallick-grid-width-100;
+}
+.u-bg-pos-center-top {
+    background-position: $smallick-grid-width-100 / 2 $all-zero;
+}
+.u-bg-pos-top-center {
+    background-position: $all-zero $smallick-grid-width-100 / 2;
+}
+.u-bg-pos-center-bottom {
+    background-position: $smallick-grid-width-100 / 2 $smallick-grid-width-100;
+}
+
+// repeatation
+.u-bg-norepeat {
+    background-repeat: no-repeat;
+}
+.u-bg-repeat-x {
+    background-repeat: repeat-x;
+}
+.u-bg-repeat-y {
+    background-repeat: repeat-y;
+}
+.u-bg-repeat-xy {
+    background-repeat: repeat;
+}
+
+// fixed
+.u-bg-fixed {
+    background-attachment: fixed;
+}
+
+// background color
+.u-bg-color-fff {
+    background-color: $white;
+}
+
+
+// img object styles
+
+// object fit cover / contain
+.u-objfit-cover {
+    object-fit: cover !important;
+}
+.u-objfit-contain {
+    object-fit: contain;
+}
+
+// object positions
+.u-obj-pos-center-middle {
+    object-position: $smallick-grid-width-100 / 2 $smallick-grid-width-100 / 2;
+}
+
+
+// transform / translate
+.u-translate-x50 {
+    left: $smallick-grid-width-100 / 2;
+    @include translateX(-$smallick-grid-width-100 / 2);
+}
+.u-translate-x46 {
+    left: $smallick-grid-width-100 / 2.17;
+    @include translateX(-$smallick-grid-width-100 / 2.17);
+}
+.u-translate-y50 {
+    top: $smallick-grid-width-100 / 2;
+    @include translateY(-$smallick-grid-width-100 / 2);
+}
+.u-translate-y46 {
+    top: $smallick-grid-width-100 / 2.17;
+    @include translateY(-$smallick-grid-width-100 / 2.17);
+}
+.u-translate-y0 {
+    @include translateY($smallick-grid-width-100/$smallick-grid-width-100);
+}
+.u-translate-y100 {
+    @include translateY(-$smallick-grid-width-100);
+}
+.u-translate-50 {
+    @extend .u-translate-x50;
+    @extend .u-translate-y50;
+    @include translate(-$smallick-grid-width-100 / 2, -$smallick-grid-width-100 / 2);
+}
+
+
+
+// transition
+.u-transition-500 {
+    @include transition500();
+}
+
+
+// position
+.u-absolute {
+    position: absolute;
+    &.u-top-0 {
+        top: $all-zero;
+    }
+    &.u-bot-0 {
+        bottom: $all-zero;
+    }
+    &.u-left-0 {
+        left: $all-zero;
+    }
+    &.u-left-50 {
+        left: $smallick-grid-width-100 / 2;
+    }
+    &.u-right-0 {
+        right: $all-zero;
+    }
+    &.u-all-0 {
+        @extend .u-bot-0;
+        @extend .u-left-0;
+        @extend .u-right-0;
+        @extend .u-top-0;
+    }
+}
+.u-relative {
+    @extend .u-absolute;
+    position: relative;
+}
+.u-fixed {
+    @extend .u-absolute;
+    position: fixed;
+}
+
+
+// overflow
+.u-oflowhidden {
+    overflow: hidden;
+}
+
+
+// opacity
+%u-opacity-0 {
+    opacity: 0;
+}
+%u-opacity-1 {
+    opacity: 1;
+}
+
+
+// border radius
+.u-border-radius-35 {
+    @include border-radius($all-zero + 35);
+}
+.u-border-radius-3 {
+    @include border-radius($all-zero + 3);
+}
+.u-border-radius-100 {
+    @include border-radius($smallick-grid-width-100);
+}
+
+
+.u-no-border {
+    border: none !important;
+}
+
+// box shadow
+.u-box-shadow {
+    @include box-shadow(0 0 10px rgba($black, 0.1));
+}
+.u-box-shadow-hvr {
+    @include box-shadow(0 0 15px rgba($black, 0.15));
+}
+.u-btn-shadow {
+    @include box-shadow(inset 0 -3px 1px rgba($black, 0.3));
+}
+
+// box + border
+
+.u-box-border {
+    border-bottom: $all-zero + 1 solid $yellow-dark;
+    padding-bottom: $all-zero + 20;
+    margin-bottom: $all-zero + 20;
+}
+.u-box-border-opacity30 {
+    border-bottom: $all-zero + 1 solid rgba($yellow-dark, 0.3);
+}
+
+// text-transform
+.u-txt-uppercase {
+    text-transform: uppercase;
+}
+.u-txt-capitalize {
+    text-transform: capitalize;
+}
+.u-txt-notranform {
+    text-transform: none !important;
+}
+
+// gradient
+// .u-liner-gradint {
+//     @include gradient-horizontal($purple-blue-start, $purple-blue-end);
+// }
+.u-liner-greenblue-gradint-h {
+    @include gradient-horizontal($green-grad, $blue-grad);
+}
+.u-liner-greenblue-gradint-v {
+    @include gradient-vertical($green-grad, $blue-grad);
+}
+
+// transparent
+.u-transparent {
+    background-color: transparent;
+}
+
+// common padding
+.u-cmn-padding {
+    padding: $font-size-global * 3 + 7 $all-zero !important;
+    @include breakpoint(md) {
+        //padding: $all-zero + 60 $all-zero !important;
+    }
+}
+.u-cmn-padding-sidewise {
+    padding: $all-zero $container-padding;
+}
+.u-no-padding {
+    padding: $all-zero;
+}
+
+// common margin
+.u-cmn-botmargin {
+    margin-bottom: $all-zero + 20;
+}
+.u-cmn-topmargin {
+    margin-top: $all-zero + 20;
+}
+.u-no-top-margin {
+    margin-top: $all-zero;
+}
+.u-no-bot-margin {
+    margin-bottom: $all-zero !important;
+}
+.u-no-margin {
+    margin: $all-zero !important;
+}
+.u-no-left-margin {
+    margin-left: $all-zero !important;
+}
+.u-no-right-margin {
+    margin-right: $all-zero !important;
+}
+
+// align
+.u-txtalign-center {
+    text-align: center;
+}
+.u-txtalign-right {
+    text-align: right;
+}
+.u-txtalign-left {
+    text-align: left;
+}
+
+
+// css triangle
+.u-css-triangle {
+    z-index: 6;
+    @extend .u-absolute;
+    @extend .u-display-block;
+    @include breakpoint(smd) {
+        display: none;
+    }
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        @extend .u-absolute;
+    }
+    &--left {
+        &:before {
+            border-bottom-width: 0px;
+            border-top-width: 110px;
+            border-left: 110px solid $yellow-dark;
+            right: $all-zero - 1;
+            top: $all-zero - 11;
+        }
+    }
+    &--left2 {
+        &:before {
+            border-bottom-width: 0px;
+            border-bottom-width: 15px;
+            border-right: 15px solid darken($brand-primary, 15%);
+            bottom: $all-zero - 15;
+            @extend .u-left-0;
+        }
+    }
+    &--right {
+        @extend .u-right-0;
+        @extend .u-bot-0;
+        &:before {
+            border-top-width: 350px;
+            border-bottom-width: 0px;
+            border-right: 350px solid $brand-primary;
+            @extend .u-right-0;
+            @extend .u-bot-0;
+        }
+    }
+    &__inner {
+        z-index: 10;
+        @extend .u-relative;
+    }
+}
+
+// ribbon
+
+.u-ribbon {
+    margin-bottom: $all-zero + 15;
+    padding: $all-zero + 6 $all-zero + 15 $all-zero;
+    @extend .u-display-in-block;
+    @extend .u-relative;
+    &--left {
+        left: $all-zero - 40;
+        padding-left: $all-zero + 41;
+    }
+    &--yellow {
+        background-color: $brand-primary;
+    }
+}
+
+
+// container
+.u-contarea-100 {
+    @extend .u-width-100;
+    @extend .u-block-elm-center;
+    @include breakpoint(md) {
+
+    }
+    &__inner {
+        @extend .u-relative;
+        @extend .u-width-100;
+        @extend .u-block-elm-center;
+        @extend .u-cmn-padding-sidewise;
+        @include breakpoint(md) {
+            max-width: $smallick-grid-width-100 / 1.11;
+            width: $smallick-grid-width-100 / 1.11;
+        }
+    }
+}
+
+// object color view
+.u-vwtype {
+    a {
+        @extend .u-relative;
+        &:before {
+            @extend .u-absolute;
+        }
+        &:hover {
+
+        }
+    }
+    &--dark {
+        a {
+            color: $white-rgba;
+        }
+        &__bgcolor {
+            background-color: $black-rgba;
+        }
+    }
+    &--midgray-type1 {
+        a {
+            color: $black-rgba-solid-lighten-25;
+        }
+        &__bgcolor {
+            background-color: $gray1-rgba;
+        }
+    }
+    &--light {
+
+    }
+}
+

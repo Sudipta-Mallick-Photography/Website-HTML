@@ -1,0 +1,434 @@
+//
+// Variables used in theme
+//
+// Full list of boostrap variables
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+//
+
+/////////////////////////////////
+// Options
+
+// Declare 0
+
+// all 0
+$all-zero: 0px;
+
+
+// Quickly modify global styling by enabling or disabling optional Bootstrap features.
+
+$enable-rounded:            true;
+$enable-shadows:            false;
+$enable-gradients:          false;
+$enable-transitions:        true;
+
+/////////////////////////////////
+// Dimension
+//
+
+$smallick-grid-height-100vh: 100vh !default;
+$smallick-grid-height-100: 100% !default;
+$smallick-grid-width-100: $smallick-grid-height-100;
+
+
+$grid-gutter-width: 30px;
+$grid-sm-gutter-width: 25px;
+
+$container-padding: $grid-gutter-width;
+$container-sm-padding: $grid-sm-gutter-width;
+
+body .container {
+    max-width: 1170px;
+    padding-right: $container-padding;
+    padding-left: $container-padding;
+    .container {
+        padding-left: $grid-gutter-width/2;
+        padding-right: $grid-gutter-width/2;
+    }
+}
+
+
+/////////////////////////////////
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg: (4 / 3);
+$line-height-sm: 1.5;
+
+$letter-spacing: 0.03em;
+
+$border-radius: 0.01rem;
+$border-radius-lg: 0.01rem;
+$border-radius-sm: 0.01rem;
+$border-width: 1px; // Default used for form and button components
+
+/////////////////////////////////
+// Colors
+$white: #fff;
+$black: #000;
+
+$white-rgba: rgba(255,255,255,1);
+$white-rgba-solid-darken-70: darken($white-rgba, 70%);
+
+
+$black-rgba: rgba(0,0,0,1);
+$black-rgba-solid-lighten-60: lighten($black-rgba, 60%);
+$black-rgba-solid-lighten-40: lighten($black-rgba, 40%);
+$black-rgba-solid-lighten-25: lighten($black-rgba, 25%);
+$black-rgba-solid-lighten-12: lighten($black-rgba, 12%);
+$black-rgba-lighten-20: rgba(0,0,0,0.8);
+
+
+$gray1-rgba: lighten($black-rgba, 95%);
+
+
+
+
+$blue: #3a8add;
+$blue-darken: #072433;
+$blue-grad: #002247;
+
+$green: #74B849;
+$green-darken: darken($green, 5%);
+$green-light: lighten($green, 5%);
+$green-dark: #17A156;
+$green-lighter: #48B149;
+$green-vibrant: #27D97B;
+$green-vibrant-darken: darken($green-vibrant, 15%);
+$green-grad: #00601B;
+
+$orange: #f1592a;
+$orange-darken: darken($orange, 5%);
+$orange-light: lighten($orange, 5%);
+
+$yellow: #FFA200;
+$yellow-darken: darken($yellow, 5%);
+$yellow-light: lighten($yellow, 5%);
+$yellow-dark: #4B3900;
+
+$teal: #53B9C1;
+$teal-darken: darken($teal, 5%);
+$teal-light: lighten($teal, 5%);
+
+$purple: #651268;
+$purple-darken: #2E2142;
+$purple-light: lighten($purple, 5%);
+
+$red: #DB0F36;
+$red-vibrant: #EB1C24;
+$red-matt: #e2403d;
+
+$gray-darker: #919191;
+$gray-dark: #D4D4D4;
+$gray: #333333;
+$gray-mid: #E2E2E2;
+$gray-light: #F6F6F6;
+$gray-lighter: $gray-light;
+$gray-lightest: $gray-light;
+
+$gray-border: $gray-lighter;
+
+$primary1: #0072BC;
+$primary2: $yellow;
+$primary3: #252525;
+$body1: $gray-dark;
+$body2: $gray;
+$body3: $gray-lightest;
+
+$brand-primary: $primary1; // Primary Brand Color
+$brand-primary-darken: darken($brand-primary, 10%);
+$brand-primary-lighten: lighten($brand-primary, 10%);
+$brand-secondary: $primary2; // Secondary Brand Color
+$brand-secondary-darken: darken($brand-secondary, 5%);
+$brand-secondary-lighten: lighten($brand-secondary, 5%);
+$brand-tertiary: $primary3; // Tertiary Brand Color
+$brand-tertiary-darken: darken($brand-tertiary, 10%);
+$brand-tertiary-lighten: lighten($brand-tertiary, 10%);
+
+$brand-success: $green;
+$brand-info: $primary3;
+$brand-warning: $primary2;
+$brand-danger: $red;
+$brand-inverse: $gray-dark;
+
+// Social icons color
+$facebook: #3b5998;
+$twitter: #1ca1f2;
+$linkedin: #0077b5;
+$youtube: #c4302b;
+$instagram: #833ab4;
+
+
+/////////////////////////////////
+// Typography
+
+$font-size-global: 16px;
+$line-height-global: 24px;
+
+$h1-font-sizes: (
+  null  : 32px,
+  480px : 38px,
+  768px : 44px,
+  992px : 50px,
+  1200px: 60px,
+  1440px: 60px
+);
+$h1-home: (
+  null  : 34px,
+  480px : 40px,
+  768px : 46px,
+  992px : 60px,
+  1200px: 72px,
+  1440px: 72px
+);
+$h1-404: (
+  null  : 34px,
+  480px : 40px,
+  768px : 46px,
+  992px : 48px,
+  1200px: 50px,
+  1440px: 60px
+);
+$h2-font-sizes: (
+  null  : 22px,
+  480px : 22px,
+  768px : 24px,
+  992px : 24px,
+  1200px: 24px,
+  1440px: 24px
+);
+$h2-home: (
+  null  : 22px,
+  480px : 24px,
+  768px : 28px,
+  992px : 30px,
+  1200px: 30px,
+  1440px: 30px
+);
+$h3-font-sizes: (
+  null  : 20px,
+  320px : 20px,
+  480px : 20px,
+  768px : 20px,
+  992px : 20px,
+  1200px: 20px,
+  1440px: 20px
+);
+$h3-home: (
+  null  : 20px,
+  320px : 20px,
+  480px : 20px,
+  768px : 20px,
+  992px : 20px,
+  1200px: 20px,
+  1440px: 20px
+);
+$h4-font-sizes: (
+  null  : 16px,
+  320px : 16px,
+  480px : 16px,
+  768px : 16px,
+  992px : 16px,
+  1200px: 16px,
+  1440px: 16px
+);
+$h4-home: (
+  null  : 16px,
+  320px : 16px,
+  480px : 16px,
+  768px : 16px,
+  992px : 16px,
+  1200px: 16px,
+  1440px: 16px
+);
+$h5-font-sizes: (
+  null  : 20px,
+  320px : 20px,
+  480px : 24px,
+  768px : 26px,
+  992px : 28px,
+  1200px: 30px,
+  1440px: 46px
+);
+$h6-font-sizes: (
+  null  : 20px,
+  320px : 20px,
+  480px : 24px,
+  768px : 26px,
+  992px : 28px,
+  1200px: 30px,
+  1440px: 46px
+);
+
+// Bottom margin of heading elements
+
+$h1-margin-bottom: (
+  null  : 32px,
+  480px : 38px,
+  768px : 42px,
+  992px : 45px,
+  1200px: 55px,
+  1440px: 55px
+);
+$h2-margin-bottom: (
+  null  : 24px,
+  480px : 26px,
+  768px : 30px,
+  992px : 35px,
+  1200px: 35px,
+  1440px: 35px
+);
+$h3-margin-bottom: (
+  null  : 15px,
+  480px : 20px,
+  768px : 20px,
+  992px : 25px,
+  1200px: 25px,
+  1440px: 25px
+);
+
+// Font path
+
+// bellarina
+$bellarina-path: "../fonts/bellarina/" !default;
+// apple symbols
+$applesymbols-path: "../fonts/applesymbols/" !default;
+// adobe caslon pro
+$acaslonpro-path: "../fonts/adobecaslonpro/" !default;
+// source sans pro
+$sourcesanspro-path: "../fonts/sourcesanspro/" !default;
+
+// Font family
+$bellarina-font-family: 'Bellarina';
+$applesymbols-font-family: 'Apple Symbols';
+$acaslonpro-font-family: 'Adobe Caslon Pro';
+$sourcesanspro-font-family: 'Source Sans Pro';
+
+// Font Weights
+$weight-lightest: 200;
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+$weight-extrabold: 800;
+$weight-black: 900;
+
+// Default font color
+$body-color:    $gray;
+$body-color-inverse: $gray-light;
+$headline-color: $gray;
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.25rem;
+$font-size-sm:   .875rem;
+$font-size-xs:   .75rem;
+
+$line-height-base: 1.5;
+
+$font-size-h1: 4.5rem;
+$font-size-h2: 2.25rem;
+$font-size-h3: 1.875rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.3125rem;
+$font-size-h6: 1.125rem;
+
+$font-family-body: $sourcesanspro-font-family;
+$font-family-headline: $acaslonpro-font-family;
+
+$font-weight-normal: $weight-light;
+
+$headings-font-family:   $font-family-headline;
+$headings-font-weight:   700;
+$headings-line-height:   1;
+$headings-color:         $gray;
+
+/////////////////////////////////
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:       $white;
+
+/////////////////////////////////
+// Links
+//
+// Style anchor elements.
+
+$link-color:                $brand-tertiary;
+$link-decoration:           none;
+$link-hover-color:          darken($link-color, 25%);
+$link-hover-decoration:     none;
+$link-active-color:         darken($link-color, 25%);
+$link-active-decoration:    none;
+$link-color-inverse:        $gray-light;
+
+
+/////////////////////////////////
+// Buttons
+
+$btn-border-radius: $border-radius;
+$btn-border-radius-lg: $border-radius-lg;
+$btn-border-radius-sm: $border-radius-sm;
+
+$btn-primary-color: $white;
+$btn-primary-bg: $brand-secondary;
+$btn-primary-border: $btn-primary-bg;
+
+$btn-secondary-color: $gray-dark;
+$btn-secondary-bg: $white;
+$btn-secondary-border: #ccc;
+
+$btn-tag-bg: $gray-light;
+$btn-tag-hover: $gray;
+$btn-tag-color: $gray;
+
+
+/////////////////////////////////
+// Forms
+
+$input-padding-x:                .75rem;
+$input-padding-y:                .5rem;
+$input-line-height:              1.25;
+
+$input-bg:                       $white;
+$input-bg-disabled:              $gray-lighter;
+
+$input-color:                    $gray;
+$input-border-color:             rgba($black,.15);
+$input-btn-border-width:         $border-width; // For form controls and buttons
+$input-box-shadow:               inset 0 1px 1px rgba($black,.075);
+
+$input-border-radius:            $border-radius;
+$input-border-radius-lg:         $border-radius-lg;
+$input-border-radius-sm:         $border-radius-sm;
+
+$input-bg-focus:                 $input-bg;
+$input-border-focus:             lighten($brand-primary, 25%);
+$input-box-shadow-focus:         $input-box-shadow, rgba($input-border-focus, .6);
+$input-color-focus:              $input-color;
+
+$input-color-placeholder:        $gray-light;
+
+$input-padding-x-sm:             .5rem;
+$input-padding-y-sm:             .25rem;
+
+$input-padding-x-lg:             1.5rem;
+$input-padding-y-lg:             .75rem;
+
+$input-height:                   (($font-size-base * $input-line-height) + ($input-padding-y * 2));
+$input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2));
+$input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2));
+
+$input-transition:               border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+
+// Form validation icons
+$form-icon-success-color: $brand-success;
+$form-icon-success: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$form-icon-success-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E"), "#", "%23");
+
+$form-icon-warning-color: $brand-warning;
+$form-icon-warning: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$form-icon-warning-color}' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E"), "#", "%23");
+
+$form-icon-danger-color: $brand-danger;
+$form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-icon-danger-color}' viewBox='-2 -2 7 7'%3E%3Cpath stroke='#{$form-icon-danger-color}' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"), "#", "%23");

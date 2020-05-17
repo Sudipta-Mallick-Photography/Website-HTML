@@ -1,0 +1,127 @@
+// input fields partial
+
+.o-form {
+    p {
+        @extend .u-cmn-botmargin;
+        &:last-child
+        //&:nth-last-of-type(2)
+        {
+            //@extend .u-no-bot-margin;
+        }
+
+    }
+    label {
+        font-size: $font-size-global + 1;
+        font-weight: normal;
+        @extend .u-display-block;
+        span {
+            color: $red;
+        }
+    }
+    input[type="text"],
+    input[type="url"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="search"],
+    textarea {
+        background-color: $white;
+        color: $gray;
+        padding: $all-zero + 11 $all-zero + 20;
+        outline: none;
+        @extend .u-no-border;
+        @extend .u-display-block;
+        @extend .u-width-100;
+    }
+    textarea {
+        height: $all-zero + 105;
+        resize: vertical;
+    }
+    input,
+    textarea {
+        &::placeholder {
+            color: $gray;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $gray;
+        }
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: $gray;
+        }
+    }
+    &.o-form--membership {
+        input[type="text"],
+        input[type="url"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="search"],
+        textarea {
+            border-bottom: rgba($white, 0.4) solid $all-zero + 1 !important;
+            color: $white;
+            padding: $all-zero + 5 $all-zero $all-zero + 10;
+            @extend .u-transparent;
+            @extend .u-transition-500;
+        }
+        textarea {
+            height: $all-zero + 65;
+        }
+
+        input[type="text"],
+        input[type="url"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="search"],
+        textarea {
+            &:focus {
+                border-bottom: rgba($white, 0.8) solid $all-zero + 1 !important;
+            }
+        }
+
+        input,
+        textarea {
+            &::placeholder {
+                color: $input-color-placeholder;
+                opacity: 1;
+            }
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: $input-color-placeholder;
+            }
+            &::-ms-input-placeholder { /* Microsoft Edge */
+                color: $input-color-placeholder;
+            }
+        }
+    }
+    &--newsletter {
+        &.o-form--footer {
+            input[type="email"] {
+                margin: $all-zero $all-zero - 3;
+                width: 65%;
+                @extend .u-display-in-block;
+                @extend .u-txt-valign-top;
+            }
+            input[type="submit"] {
+                border-radius: 0;
+                font-weight: $weight-bold;
+                @extend .u-no-top-margin;
+            }
+        }
+    }
+}
+
+.search-form {
+    @extend .o-form;
+    input[type="search"] {
+        border: $gray-mid solid $all-zero + 1 !important;
+    }
+    button {
+        @extend .u-no-border;
+        @extend .c-btn;
+        @extend .c-btn--blue;
+        //@extend .c-btn--volunteer;
+        svg {
+            display: none;
+        }
+    }
+}
+
+

@@ -1,0 +1,147 @@
+/////////////////////////////////
+// Local Mixins
+//
+
+
+// - Breakpoints
+// - Font Size responsive
+// - Element Position
+
+
+
+
+// Breakpoints
+
+@mixin breakpoint($class) {
+
+  @if $class == sxs {
+    @media (max-width: 479px) { @content; }
+  }
+
+  @else if $class == xxs {
+    @media (min-width: 480px) { @content; }
+  }
+
+  @else if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @else if $class == smd {
+    @media (max-width: 991px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @else if $class == mlg {
+    @media (max-width: 1199px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: sxs, xxs, xs, sm, smd, md, mlg, lg";
+  }
+}
+
+
+//Font size responsive
+
+@mixin font-size($fs-map) {
+    @each $fs-breakpoint,
+    $fs-font-size in $fs-map {
+        @if $fs-breakpoint==null {
+            font-size: $fs-font-size;
+        }
+        @else {
+            @media screen and (min-width: $fs-breakpoint) {
+                font-size: $fs-font-size;
+            }
+        }
+    }
+}
+
+
+
+//Margin bottom of Heading elements responsive
+
+@mixin margin-bottom($mrgbtm-map) {
+    @each $mrgbtm-breakpoint,
+    $mrgbtm in $mrgbtm-map {
+        @if $mrgbtm-breakpoint==null {
+            margin-bottom: $mrgbtm;
+        }
+        @else {
+            @media screen and (min-width: $mrgbtm-breakpoint) {
+                margin-bottom: $mrgbtm;
+            }
+        }
+    }
+}
+
+
+// Element Position
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-align($position: relative) {
+  position: $position;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin allign-middle-all($position: relative) {
+  position: $position;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-align-abs($position: absolute) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-align-abs($position: absolute) {
+  position: $position;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin allign-middle-all-abs($position: absolute) {
+  position: $position;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin unvertical-align() {
+    top: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}

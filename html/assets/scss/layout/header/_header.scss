@@ -1,0 +1,50 @@
+// header partial
+
+.o-header {
+    .c-brand {
+        height: $smallick-grid-height-100vh / 5;
+        @extend .u-oflowhidden;
+        &__logo {
+            @extend .u-display-in-block;
+            h1, a {
+                @extend .u-no-margin;
+            }
+        }
+        &__cta {
+            margin-top: $all-zero + 3;
+            @extend .u-float-right;
+            @include breakpoint(sm) {
+                margin-top: $all-zero + 7;
+            }
+            @include breakpoint(md) {
+                margin-top: $all-zero + 12;
+            }
+            .c-hmbrgr-ic {
+                &--main {
+                    margin-left: $all-zero + 18;
+                    @include breakpoint(md) {
+                        margin-left: $all-zero + 25;
+                    }
+                }
+            }
+        }
+        @include breakpoint(md) {
+            height: $smallick-grid-height-100vh / 4;
+        }
+        &.headroom--pinned {
+            //@extend .u-display-block;
+            @extend %u-opacity-1;
+            @extend .u-translate-y0;
+        }
+        &.headroom--unpinned {
+            //@extend .u-display-none;
+            @extend %u-opacity-0;
+            @extend .u-translate-y100;
+        }
+        &.headroom--pinned {
+            &.headroom--not-top {
+                background-color: $black-rgba-lighten-20;
+            }
+        }
+    }
+}

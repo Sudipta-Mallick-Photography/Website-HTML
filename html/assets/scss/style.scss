@@ -1,0 +1,14 @@
+
+// bootstrap all partials via component
+@import "component/bootstrap";
+
+// project all partials
+
+// base partials
+@import "base/base";
+
+// layout partials
+@import "layout/layout";
+
+// module partials
+@import "module/modules";

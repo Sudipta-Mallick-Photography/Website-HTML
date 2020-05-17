@@ -1,0 +1,205 @@
+// All buttons partial
+
+.c-btn {
+    color: $white;
+    font-size: $font-size-global - 3;
+    font-weight: $weight-semibold;
+    font-family: $headings-font-family;
+    line-height: $all-zero + 42;
+    height: $all-zero + 42;
+    padding: $all-zero $all-zero + 24;
+    margin-top: $all-zero + 20;
+    //@extend .u-btn-shadow;
+    @extend .u-txt-uppercase;
+    @extend .u-border-radius-3;
+    @extend .u-display-in-block;
+    @include breakpoint(xxs) {
+        font-size: $font-size-global - 3;
+        line-height: $all-zero + 42;
+        height: $all-zero + 42;
+    }
+    &:hover {
+        color: darken($white, 10%);
+    }
+
+
+    // button sizes
+    &--small {
+        font-size: $font-size-global - 4;
+        line-height: $all-zero + 40;
+        height: $all-zero + 40;
+        padding: $all-zero $all-zero + 15;
+    }
+    &--small-xs {
+        font-size: $font-size-global + 4;
+        line-height: $all-zero + 35;
+        height: $all-zero + 38;
+        padding: $all-zero $all-zero + 25;
+    }
+    &--large {
+        font-size: $font-size-global;
+        padding: $all-zero $all-zero + 30;
+    }
+    &--large-xs {
+        font-size: $font-size-global + 2;
+        padding: $all-zero $all-zero + 40;
+        line-height: $all-zero + 54;
+        height: $all-zero + 54;
+    }
+
+
+    // button colors
+    &--green {
+        background-color: $green-vibrant;
+        &:hover {
+            background-color: $green-vibrant-darken;
+            //color: $red !important;
+        }
+    }
+    &--yellow {
+        background-color: $brand-secondary;
+        &:hover {
+            background-color: $brand-secondary-darken;
+        }
+    }
+    &--blue {
+        background-color: $brand-primary;
+        &:hover {
+            background-color: $brand-primary-darken;
+        }
+    }
+    &--red {
+        background-color: $red;
+    }
+    // &--pink {
+    //     background-color: $brand-secondary;
+    //     &:hover {
+    //         background-color: $brand-secondary-darken;
+    //     }
+    // }
+
+
+    // button labels
+    &--label-gray {
+        color: $gray !important;
+        &:hover {
+            color: $black !important;
+        }
+    }
+    &--label-uppercase {
+        @extend .u-txt-uppercase;
+    }
+
+
+
+    // button with icons
+    &--icon {
+        height: $all-zero + 50;
+        line-height: $all-zero + 50;
+        padding-left: $all-zero + 50;
+        @extend .u-relative;
+        @include breakpoint(xxs) {
+            padding-left: $all-zero + 60;
+        }
+        &:before {
+            @extend .u-absolute;
+            @extend .u-display-block;
+            @extend .u-bg-pos-center-middle;
+            @extend .u-bg-contain;
+            @extend .u-translate-y50;
+            @extend .u-bg-norepeat;
+            left: $all-zero + 20;
+            content: "";
+            width: 25px; height: 25px;
+            @include breakpoint(xxs) {
+                width: 31px; height: 31px;
+            }
+        }
+        &--playbtn {
+            &:before {
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAArCAMAAADWg4HyAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAQ5QTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////74SE5TMz5j8/86Wl////4yUl6lpa+dPT////5C8v8IyM//z8////////5TIy50RE9ru7////7XFx/Ojo5C4u86Ki////6lhY+dLS////8ImJ/vr650BA9ri474WF7n5+5js79bS074KC/vX16VJS+c3N5Coq8p2d7Gpq++Pj////9ra2////74aG/vf3////////6VRU+c/P////74CA5j09856e////////////////////////J4MeNgAAAFp0Uk5TAAY/gK7U7fkxmf/uL7X+tgiO+48kzzXq7DfzjS7/////tP///5z///8H8P///z7/////r///1f/////////////////////x/zL//zO5//8w////CdD0JSb64nSpCQAAAZNJREFUeJyd1WdXwjAUBuALBQphlQJScKBXUUHFgda9JypORPn/f0TSCiRpk3J8P+Y+pyfNuAHgEwprkWhM12PRiBYOgSLxRIwwSSbiMplKZ4iQTDblJ42cKUoaM294aKHoJ2mKBYFOlWSUEKvM0XJFTgmpsLig+CpNaTwNQzrX0ZxHP5gLooRMD9fVd7H4mDOuTbODs3PVeT+84G4st1s4yOKS12ac7a5xY8sU48qqB9cGtN7ghtYci+sbom3UAZrEzyJubgm4CaBJLG7v8BUNoCWziLt7bKUFYMst4v7BuGIDWCqLh0ejigWgKy3i8bCiB1tkrHoOiCfMHJT/hqdn7L8p1gzx/GJcaSn2AvHyiq1o8j3G6xu+EpadHcTbO57e1z1n8s9WH4gQeiahzQ255/fxSaTk2bkYHXaIypdXjyQd9769sXfzfe7j0yuJmZr8zueG/aEb2Eu+uv/pUYPe11PRntAoLTkVeirAt7xX/4AYIz/xG0B7YNZL/d8Wp7WJb1ZbJmnoW2gn+/2kHfQWqvMLjktd62yoeXEAAAAASUVORK5CYII=');
+            }
+        }
+    }
+
+
+
+    // back to top
+    &--back-to-top {
+        background-color: $black;
+        width: $all-zero + 50;
+        height: $all-zero + 50;
+        bottom: $all-zero + 30;
+        right: $all-zero + 30;
+        visibility: hidden;
+        opacity: 0;
+        @include border-radius($smallick-grid-width-100);
+        @extend .u-no-padding;
+        @extend .u-fixed;
+        @extend .u-display-in-block;
+        &:before {
+            content: "";
+            color: $white;
+            height: $all-zero + 20;
+            width: $all-zero + 20;
+            background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAgCAYAAAAWl4iLAAAABGdBTUEAALGPC/xhBQAAAWRJREFUSA3tlctKw0AUhhvpTrStovaibcU388H0OVxLvd+KeEWt+gJu3FmI3x/OxDFJkyzcCPnh65w5lz/MNJBarYTCMGzDAezDaomR4haMOnAHTjcEa8WTOR0YdOHBOXrrLXE7Z3R2icEePJrZta1aXHxP3JntkFFhYB2eQLoE3bHTCsHYNjpNN8MinaKxD882eM66BHXbh5ogXoYry+lUvbSTl6FhAC8gnUHLjH4ZW04PvFAj0uk2PKufkMIQJiCdQNNViVPGZt6iplNJOmXfzUQriU14A+kIGn4D+0xjM29SPwVpAgNnusXmHaRDWPRNbXimsWd+HDmE4SvrUH+EXnhpBAtJ0zLG1tNgXqeVxgE/uxTmYTsIgk81JUVPndyX8vQEybrb06fT7sCHy+WuMoZIuY1ecc6L/zSsjOPrrK6iuor4BuKgeiuqq4hvIA7+31uhb1mh+MxN+S7t0TgtbLaGb2wqwZTB5U5OAAAAAElFTkSuQmCC');
+            @extend .u-absolute;
+            @extend .u-display-block;
+            @extend .u-bg-pos-center-middle;
+            @extend .u-bg-contain;
+            @extend .u-translate-50;
+            @extend .u-bg-norepeat;
+        }
+    }
+}
+
+.cd-top {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: -100000px;
+  white-space: nowrap;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+  transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+}
+
+.cd-top.cd-top--show,
+.cd-top.cd-top--fade-out,
+.cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+}
+
+.cd-top.cd-top--show {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top.cd-top--fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+
+.cd-top:hover {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: $all-zero + 20;
+    bottom: $all-zero + 20;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: $all-zero + 50;
+    width: $all-zero + 50;
+    right: $all-zero + 30;
+    bottom: $all-zero + 30;
+  }
+}
+
+

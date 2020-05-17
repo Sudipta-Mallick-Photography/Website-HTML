@@ -1,0 +1,27 @@
+// footer partial
+.c-footer {
+    .u-vwtype--dark__bgcolor {
+        background-color: $black-rgba-solid-lighten-12;
+    }
+    &__inner {
+        @extend .u-cmn-padding;
+        @include breakpoint(sm) {
+            display: table;
+            margin: $all-zero auto;
+            width: $smallick-grid-width-100;
+        }
+    }
+    @include breakpoint(sm) {
+        .o-brand,
+        .o-social {
+            display: table-cell;
+            float: none;
+            vertical-align: middle;
+        }
+        .o-social {
+            text-align: right;
+        }
+    }
+}
+
+

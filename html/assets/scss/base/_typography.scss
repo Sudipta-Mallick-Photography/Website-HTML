@@ -1,0 +1,55 @@
+/////////////////////////////////
+// Typography partial
+
+p {
+    font-family: $font-family-body;
+    font-size: $font-size-global;
+    line-height: $line-height-global;
+    color: $body-color;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    letter-spacing: 0;
+    color: $headline-color;
+    font-family: $headings-font-family;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    &.c-hlight {
+        color: $white;
+        span {
+
+        }
+    }
+}
+
+
+h1, .h1 {
+    @include font-size($h1-font-sizes);
+    @include margin-bottom($h1-margin-bottom);
+}
+.c-title-h1-home {
+    @include font-size($h1-home);
+}
+h2, .h2 {
+    @include font-size($h2-font-sizes);
+    @include margin-bottom($h2-margin-bottom);
+}
+.c-title-h2-home {
+    font-weight: $weight-extrabold;
+    @include font-size($h2-home);
+}
+h3, .h3 {
+    font-weight: $weight-bold;
+    @include font-size($h3-font-sizes);
+    @include margin-bottom($h3-margin-bottom);
+}
+h4, .h4 {
+    font-weight: $weight-bold;
+    @include font-size($h4-font-sizes);
+}
+

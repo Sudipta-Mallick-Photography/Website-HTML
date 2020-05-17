@@ -1,0 +1,43 @@
+// Navigation partial
+
+.c-nav {
+    font-family: $acaslonpro-font-family;
+    font-size: $font-size-global + 2;
+    letter-spacing: $all-zero + 1;
+    line-height: $line-height-global - 4;
+    @extend .u-txt-uppercase;
+    li {
+        margin: $all-zero $all-zero + 12;
+        @extend .u-relative;
+        @extend .u-display-in-block;
+        &:after {
+            content: "";
+            top: $all-zero - 2;
+            right: $all-zero - 15;
+            width: $all-zero + 1;
+            background-color: $white-rgba;
+            @extend .u-absolute;
+            @extend .u-height-100;
+        }
+        &:first-child {
+            @extend .u-no-left-margin;
+        }
+        &:last-child {
+            @extend .u-no-right-margin;
+            &:after {
+                @extend .u-display-none;
+            }
+        }
+    }
+    &--home {
+        padding-top: $font-size-global * 4 - 1;
+        margin-bottom: $font-size-global * 1.5;
+        @extend .u-txt-capitalize;
+    }
+    &--darkbg {
+
+    }
+    &.u-txtalign-center {
+
+    }
+}

@@ -1,0 +1,23 @@
+// text area partial
+
+.o-create {
+    &__post {
+
+    }
+    &__post-area {
+        min-height: $all-zero + 60;
+        padding-right: $all-zero + 35;
+        //padding-top: $all-zero + 15;
+    }
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+     &__post-area  {
+        min-height: $all-zero + 55;
+        }
+    }
+
+    .c-attachment {
+        right: $all-zero + 30;
+    }
+}
+
+
