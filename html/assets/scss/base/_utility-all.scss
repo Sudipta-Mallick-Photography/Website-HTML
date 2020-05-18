@@ -281,8 +281,16 @@
 .u-txt-capitalize {
     text-transform: capitalize;
 }
+.u-txt-lowercase {
+    text-transform: lowercase;
+}
 .u-txt-notranform {
     text-transform: none !important;
+}
+
+// font-variant
+.u-txt-smallcaps {
+    font-variant: small-caps;
 }
 
 // gradient
@@ -456,11 +464,18 @@
         }
     }
     &--midgray-type1 {
-        a {
-            color: $black-rgba-solid-lighten-25;
-        }
+        color: $black-rgba-solid-lighten-25;
         &__bgcolor {
             background-color: $gray1-rgba;
+        }
+        h4, h5, h6 {
+            color: $black-rgba;
+        }
+        a {
+            color: $black-rgba-solid-lighten-40;
+        }
+        p {
+            color: $black-rgba-solid-lighten-40;
         }
     }
     &--light {

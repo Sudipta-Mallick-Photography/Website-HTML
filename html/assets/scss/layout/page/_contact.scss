@@ -5,6 +5,41 @@
     p {
         font-family: $acaslonpro-font-family;
     }
+    .c-contact {
+        .c-title {
+            @extend .u-no-top-margin;
+        }
+        h4 {
+            font-size: $font-size-global + 6;
+        }
+        h5 {
+            padding-top: $all-zero + 10;
+            margin-bottom: $all-zero + 6;
+            font-size: $font-size-global + 2;
+        }
+        &__cred {
+            margin-bottom: $font-size-global * 2 + 3;
+            font-size: $font-size-global + 2;
+            p {
+                font-size: $font-size-global + 2;
+            }
+            &:first-child {
+                margin-top: $font-size-global + 8;
+            }
+        }
+        .c-phone {
+            font-size: $font-size-global + 9;
+            p {
+                @extend .c-phone;
+            }
+        }
+        .c-followme {
+            padding-top: $font-size-global - 1;
+        }
+        &--block {
+
+        }
+    }
 }
 
 

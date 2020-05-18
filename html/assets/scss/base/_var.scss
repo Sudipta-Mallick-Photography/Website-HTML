@@ -69,11 +69,15 @@ $black: #000;
 
 $white-rgba: rgba(255,255,255,1);
 $white-rgba-solid-darken-70: darken($white-rgba, 70%);
+$white-rgba-solid-darken-60: darken($white-rgba, 60%);
+$white-rgba-solid-darken-50: darken($white-rgba, 50%);
 
 
 $black-rgba: rgba(0,0,0,1);
 $black-rgba-solid-lighten-60: lighten($black-rgba, 60%);
+$black-rgba-solid-lighten-50: lighten($black-rgba, 50%);
 $black-rgba-solid-lighten-40: lighten($black-rgba, 40%);
+$black-rgba-solid-lighten-30: lighten($black-rgba, 30%);
 $black-rgba-solid-lighten-25: lighten($black-rgba, 25%);
 $black-rgba-solid-lighten-12: lighten($black-rgba, 12%);
 $black-rgba-lighten-20: rgba(0,0,0,0.8);
@@ -190,12 +194,12 @@ $h1-404: (
   1440px: 60px
 );
 $h2-font-sizes: (
-  null  : 22px,
-  480px : 22px,
-  768px : 24px,
-  992px : 24px,
-  1200px: 24px,
-  1440px: 24px
+  null  : 26px,
+  480px : 26px,
+  768px : 32px,
+  992px : 38px,
+  1200px: 46px,
+  1440px: 50px
 );
 $h2-home: (
   null  : 22px,

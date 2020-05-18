@@ -1,5 +1,6 @@
 // All lines partial
 
+// lines related to links
 .c-line {
     a {
         @extend .u-relative;
@@ -81,6 +82,108 @@
             //        @extend .u-left-0;
             //     }
             // }
+        }
+    }
+}
+
+
+// lines related to boxes, headings etc.
+.c-bx-line {
+    @extend .u-relative;
+    &:before,
+    &:after {
+        content: "";
+        @extend .u-absolute;
+    }
+    &--over {
+        &:before {
+            @extend .u-top-0;
+            height: $all-zero + 1;
+            width: $font-size-global * 3 - 3;
+        }
+        &--left {
+            &:before {
+                @extend .u-left-0;
+            }
+        }
+        &--right {
+            &:before {
+                @extend .u-right-0;
+            }
+        }
+        &--stretched {
+            &:before {
+                @extend .u-left-0;
+                @extend .u-right-0;
+                @extend .u-width-100;
+            }
+        }
+        &--dark {
+            &:before {
+                background-color: $black-rgba-solid-lighten-50;
+            }
+        }
+        &--light {
+            &:before {
+                background-color: $white-rgba;
+            }
+        }
+    }
+    &--under {
+        &:after {
+            @extend .u-bot-0;
+            height: $all-zero + 1;
+            width: $font-size-global * 3 - 3;
+        }
+        &--left {
+            &:after {
+                @extend .u-left-0;
+            }
+        }
+        &--right {
+            &:after {
+                @extend .u-right-0;
+            }
+        }
+        &--stretched {
+            &:after {
+                @extend .u-left-0;
+                @extend .u-right-0;
+                @extend .u-width-100;
+            }
+        }
+        &--dark {
+            &:after {
+                background-color: $black-rgba-solid-lighten-50;
+            }
+        }
+        &--light {
+            &:after {
+                background-color: $white-rgba;
+            }
+        }
+    }
+    &--left {
+        padding-left: $font-size-global - 1;
+        &:before {
+            @extend .u-left-0;
+            @extend .u-height-100;
+            width: $all-zero + 1;
+        }
+        &--dark {
+            &:before {
+                background-color: $black-rgba-solid-lighten-30;
+            }
+        }
+        &--light {
+            &:before {
+                background-color: $white-rgba;
+            }
+        }
+    }
+    &--right {
+        &:after {
+
         }
     }
 }
