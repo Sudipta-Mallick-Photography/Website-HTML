@@ -1,26 +1,65 @@
 // Portfolio section partial
 
-.content-styled {
-    .c-gallery {
-        figure {
-            height: $all-zero + 290;
-            margin-top: $all-zero + 30;
-            @extend .u-relative;
-            @extend .u-float-left;
+.o-portfolio {
+    &__holder {
+        @extend .u-no-side-padding;
+    }
+    .c-portfolio {
+        &__item {
+            height: $smallick-grid-height-100vh / 3;
+            margin-bottom: $all-zero + 1;
             @extend .u-display-block;
-            a, img {
+            @extend .u-relative;
+            article {
+                @extend .u-relative;
                 @extend .u-width-100;
                 @extend .u-height-100;
-                @extend .u-display-block;
+                div,
+                figure,
+                img {
+                    @extend article;
+                }
+                img {
+                    @extend .u-objfit-cover;
+                    @extend .u-obj-pos-center-middle;
+                }
+                header {
+                    z-index: 5;
+                    @extend .u-absolute;
+                    @extend .u-translate-50;
+                    @extend .u-txtalign-center;
+                    h3 {
+                        z-index: 6;
+                        @extend .c-box;
+                        @extend .c-title;
+                        @extend .c-title--light;
+                        @extend .u-no-margin;
+                        @extend .c-box--padding;
+                        @extend .u-transition-500;
+                        @extend .c-box--border-solid;
+                        @extend .c-box--bg-transparent--light;
+                        @extend .c-box--border-solid--opacity0;
+                        @include breakpoint(sxs) {
+                            letter-spacing: $all-zero + 1;
+                        }
+                    }
+                }
             }
-            img {
-                @extend .u-objfit-cover;
-                @extend .u-obj-pos-center-middle;
+            &:hover {
+                article {
+                    header {
+                        h3 {
+                            @extend .c-box--border-solid;
+                            @extend .c-box--border-solid--light;
+                            //@extend .c-box--bg-transparent--dark;
+                            @extend .c-box--border-solid--opacity1;
+                            @extend .c-box--nobg;
+                        }
+                    }
+                }
             }
-            &:nth-of-type(1),
-            &:nth-of-type(2),
-            &:nth-of-type(3) {
-                @extend .u-no-top-margin;
+            &:last-child {
+                @extend .u-no-bot-margin;
             }
         }
     }

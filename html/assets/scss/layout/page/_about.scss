@@ -1,27 +1,19 @@
-// Portfolio section partial
+// About page partial
 
-.content-styled {
-    .c-gallery {
-        figure {
-            height: $all-zero + 290;
-            margin-top: $all-zero + 30;
-            @extend .u-relative;
-            @extend .u-float-left;
-            @extend .u-display-block;
-            a, img {
-                @extend .u-width-100;
-                @extend .u-height-100;
-                @extend .u-display-block;
-            }
-            img {
-                @extend .u-objfit-cover;
-                @extend .u-obj-pos-center-middle;
-            }
-            &:nth-of-type(1),
-            &:nth-of-type(2),
-            &:nth-of-type(3) {
-                @extend .u-no-top-margin;
-            }
+.o-about {
+    .c-about {
+        @include breakpoint(xxs) {
+            text-align: center;
+        }
+        @include breakpoint(sm) {
+            margin: $all-zero auto;
+            width: $smallick-grid-width-100 / 1.176;
+        }
+        @include breakpoint(md) {
+            width: $smallick-grid-width-100 / 1.25;
+        }
+        @include breakpoint(lg) {
+            width: $smallick-grid-width-100 / 1.33;
         }
     }
 }

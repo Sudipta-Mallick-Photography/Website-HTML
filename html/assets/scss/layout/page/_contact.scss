@@ -4,8 +4,20 @@
     font-family: $acaslonpro-font-family;
     p {
         font-family: $acaslonpro-font-family;
+        @include breakpoint(xxs) {
+            letter-spacing: $all-zero + 1;
+        }
     }
     .c-contact {
+        @extend .u-oflowhidden;
+        @include breakpoint(sm) {
+            margin: $all-zero auto;
+            text-align: center;
+            width: $smallick-grid-width-100 / 1.25;
+        }
+        @include breakpoint(md) {
+            width: $smallick-grid-width-100 / 1.33;
+        }
         .c-title {
             @extend .u-no-top-margin;
         }
@@ -26,16 +38,64 @@
             &:first-child {
                 margin-top: $font-size-global + 8;
             }
+            @include breakpoint(sm) {
+                text-align: left;
+                width: $smallick-grid-width-100;
+            }
         }
         .c-phone {
             font-size: $font-size-global + 9;
+            @include breakpoint(sm) {
+                float: left;
+                width: $smallick-grid-width-100 / 2.5;
+            }
+            @include breakpoint(lg) {
+                font-size: $font-size-global * 2 - 2;
+            }
             p {
-                @extend .c-phone;
+                //@extend .c-phone;
+                font-size: $font-size-global + 9;
+                @include breakpoint(lg) {
+                    font-size: $font-size-global * 2 - 2;
+                }
             }
         }
+        .c-email {
+            //@extend .c-phone;
+            @include breakpoint(sm) {
+                float: right;
+                margin-top: $font-size-global + 8;
+                width: $smallick-grid-width-100 / 1.67;
+            }
+            p {
+                @include breakpoint(lg) {
+                    font-size: $font-size-global * 1.5;
+                }
+            }
+        }
+        .c-address {
+            p {
+                @include breakpoint(lg) {
+                    font-size: $font-size-global * 1.5;
+                }
+            }
+        }
+        &__inner {
+            @extend .u-oflowhidden;
+        }
+
         .c-followme {
             padding-top: $font-size-global - 1;
+            @include breakpoint(lg) {
+                padding-top: $font-size-global * 2 - 2;
+                h4 {
+                    font-size: $font-size-global * 1.5 + 2;
+                    margin-bottom: $font-size-global;
+                }
+            }
         }
+
+        // contact block
         &--block {
 
         }

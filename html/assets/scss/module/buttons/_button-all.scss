@@ -186,6 +186,23 @@
   opacity: 1;
 }
 
+.c-arrowbtn {
+    &--scrolltop {
+        @extend .u-right-0;
+        @extend .u-transition-500;
+        z-index: 100;
+        color: $white-rgba;
+        bottom: $all-zero + 30;
+        background-color: $black-rgba;
+        font-size: $font-size-global + 4;
+        line-height: $font-size-global * 1.5;
+        padding: $font-size-global / 2 $font-size-global;
+        @include breakpoint(lg) {
+            // right: $all-zero + 50;
+        }
+    }
+}
+
 @media only screen and (min-width: 768px) {
   .cd-top {
     right: $all-zero + 20;

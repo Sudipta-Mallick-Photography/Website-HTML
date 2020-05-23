@@ -6,177 +6,60 @@
         @extend .u-no-top-margin;
     }
 
+    // box with solid border
+    &--border-solid {
+        border-width: $all-zero + 1;
+        border-style: solid;
+        &--light {
+            border-color: $white-rgba;
+        }
+        &--dark {
+            border-color: $black-rgba;
+        }
+        &--opacity0 {
+            border-color: rgba($white-rgba, 0);
+            @extend .u-transition-500;
+        }
+        &--opacity1 {
+            border-color: rgba($white-rgba, 0.6);
+            @extend .u-transition-500;
+        }
+    }
 
+    &--no-border {
+        @extend .u-no-border;
+    }
+
+    // box and background
+
+    // box with no bg
+    &--nobg {
+        @extend .u-transparent;
+    }
+
+    // box with transparent bg
+    &--bg-transparent {
+        &--light {
+            background-color: rgba($white-rgba, 0.2);
+        }
+        &--dark {
+            background-color: rgba($black-rgba, 0.2);
+        }
+    }
+
+    // box with solid bg
+    &--bg-solid {
+        &--light {
+            background-color: $white-rgba;
+        }
+        &--dark {
+            background-color: $black-rgba;
+        }
+    }
 
     // box padding
     &--padding {
-        padding: $all-zero + 15;
-        @include breakpoint(xxs) {
-            padding: $all-zero + 20;
-        }
-        @include breakpoint(md) {
-            padding: $all-zero + 90 $all-zero;
-        }
-    }
-    &--padding-special {
-        padding: $all-zero + 30 $all-zero + 40;
-    }
-
-
-
-    // box colors
-    &--white {
-        background-color: $white;
-    }
-    &--yellow {
-        background-color: $brand-secondary;
-    }
-    &--green {
-        background-color: $green;
-    }
-    &--red {
-        background-color: $red-vibrant;
-    }
-    &--blue {
-        background-color: $brand-primary;
-    }
-    &--bluedark {
-        background-color: $blue-darken;
-    }
-    &--dark {
-        background-color: $brand-tertiary;
-    }
-    &--inverse {
-        color: $body-color-inverse;
-        h1, h2, h3, h4, h5, h6, p {
-            color: $body-color-inverse;
-        }
-        a {
-            color: $link-color-inverse;
-        }
-    }
-    &--bluedark {
-        &.c-box--inverse {
-            .c-hlight {
-                span,
-                strong {
-                    color: $green-vibrant;
-                }
-            }
-        }
-    }
-
-
-
-    // box dashes / dotted
-    &--dotted {
-        border-width: $all-zero +2;
-        border-style: dashed;
-        @include breakpoint(xs) {
-            text-align: center;
-        }
-        &--red {
-            color: $red;
-            margin: $all-zero + 30 $all-zero;
-            @include breakpoint(md) {
-                margin-top: $all-zero;
-            }
-        }
-        &--green {
-            color: $green-dark;
-        }
-        div {
-            @include breakpoint(xs) {
-                text-align: center;
-            }
-        }
-        img {
-            @include breakpoint(xs) {
-                margin-bottom: $all-zero + 20;
-            }
-        }
-    }
-
-
-
-    // box content type
-    &--image {
-        padding-bottom: $all-zero + 180;
-        @include breakpoint(xs) {
-            padding-bottom: $all-zero;
-        }
-        .c-btn {
-            &--large {
-                @include breakpoint(sxs) {
-                    font-size: $font-size-global + 1;
-                    padding: $all-zero $all-zero + 20;
-                }
-            }
-        }
-    }
-
-    &--bg {
-        &--white {
-            @extend .u-bg-color-fff;
-        }
-    }
-
-
-
-    // box special
-    &--special {
-        padding: $all-zero + 24;
-        @include breakpoint(xxs) {
-            padding: $all-zero + 24 $all-zero + 30;
-        }
-        p {
-            &:last-child {
-                @extend .u-no-bot-margin;
-            }
-        }
-    }
-
-
-
-    // box form
-    &--form {
-        background-image: url("../images/hm-logo-contact-box.png");
-        // background-position: $smallick-grid-width-100 / 2 100%;
-        @extend .u-bg-norepeat;
-        @extend .u-bg-pos-center-bottom;
-    }
-
-    &__image {
-        height: $all-zero + 158;
-        @extend .u-bg-norepeat;
-        @extend .u-absolute;
-        @extend .u-display-block;
-        @extend .u-translate-x50;
-        @extend .u-bot-0;
-        @extend .u-width-100;
-        @extend .u-oflowhidden;
-        // &:after {
-        //     content: "";
-        //     background-image: url('../images/black-tie-gala.png');
-        //     height: $all-zero + 163;
-        //     @extend .u-bg-norepeat;
-        //     @extend .u-absolute;
-        //     @extend .u-display-block;
-        //     @extend .u-translate-x50;
-        //     @extend .u-bot-0;
-        //     @extend .u-width-100;
-        // }
-        @include breakpoint(xs) {
-            height: auto;
-            position: static;
-            transform: none;
-        }
-        img {
-            @include breakpoint(xs) {
-                display: block;
-                margin: $all-zero + 20 auto $all-zero;
-            }
-        }
+        padding: 0.5em 1.3em 0.35em;
     }
 }
 

@@ -80,7 +80,7 @@ $black-rgba-solid-lighten-40: lighten($black-rgba, 40%);
 $black-rgba-solid-lighten-30: lighten($black-rgba, 30%);
 $black-rgba-solid-lighten-25: lighten($black-rgba, 25%);
 $black-rgba-solid-lighten-12: lighten($black-rgba, 12%);
-$black-rgba-lighten-20: rgba(0,0,0,0.8);
+$black-rgba-lighten-20: rgba($black-rgba, 0.8);
 
 
 $gray1-rgba: lighten($black-rgba, 95%);

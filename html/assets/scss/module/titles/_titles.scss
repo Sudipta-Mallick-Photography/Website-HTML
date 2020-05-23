@@ -42,6 +42,14 @@
         }
     }
 
+    // color
+    &--dark {
+        color: rgba($black-rgba, 0.7);
+    }
+    &--light {
+        color: $white-rgba;
+    }
+
 
     // margin
     &--notopmargin {

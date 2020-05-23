@@ -43,7 +43,7 @@
     &--light {
         a {
             &:before {
-
+                background-color: $black-rgba;
             }
         }
     }
@@ -182,8 +182,23 @@
         }
     }
     &--right {
+        padding-right: $font-size-global - 1;
         &:after {
-
+            @extend .u-right-0;
+            @extend .u-top-0;
+            @extend .u-bot-0;
+            //@extend .u-height-100;
+            width: $all-zero + 1;
+        }
+        &--dark {
+            &:after {
+                background-color: $black-rgba-solid-lighten-30;
+            }
+        }
+        &--light {
+            &:after {
+                background-color: $white-rgba;
+            }
         }
     }
 }

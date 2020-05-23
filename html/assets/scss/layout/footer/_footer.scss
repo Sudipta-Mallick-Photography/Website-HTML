@@ -8,6 +8,7 @@
         @include breakpoint(sm) {
             display: table;
             margin: $all-zero auto;
+            padding: $font-size-global * 2.5 $all-zero !important;
             width: $smallick-grid-width-100;
         }
     }

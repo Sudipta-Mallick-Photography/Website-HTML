@@ -25,18 +25,11 @@
     height: $smallick-grid-height-100vh;
 }
 
-
-// alignment
-.u-valign-middle {
-    display: table;
+// block element alignment
+.u-block-elm-center {
     margin: $all-zero auto;
-    width: $smallick-grid-width-100;
-    .u-valign-middle-inner {
-        display: table-cell;
-        float: none;
-        vertical-align: middle;
-    }
 }
+
 
 // no float
 .u-no-float {
@@ -52,18 +45,18 @@
 }
 
 
-// block element alignment
-.u-block-elm-center {
-    margin: $all-zero auto;
-}
-
-
 // display
 .u-display-block {
     display: block;
 }
 .u-display-in-block {
     display: inline-block;
+}
+.u-display-table {
+    display: table;
+}
+.u-display-table-cell {
+    display: table-cell;
 }
 .u-display-none {
     display: none;
@@ -75,6 +68,19 @@
 }
 .u-txt-valign-top {
     vertical-align: top;
+}
+
+
+// alignment
+.u-valign-middle {
+    @extend .u-display-table;
+    @extend .u-block-elm-center;
+    width: $smallick-grid-width-100;
+    .u-valign-middle-inner {
+        @extend .u-no-float;
+        @extend .u-txt-valign-middle;
+        @extend .u-display-table-cell;
+    }
 }
 
 
@@ -312,12 +318,19 @@
 // common padding
 .u-cmn-padding {
     padding: $font-size-global * 3 + 7 $all-zero !important;
-    @include breakpoint(md) {
-        //padding: $all-zero + 60 $all-zero !important;
+    @include breakpoint(lg) {
+        padding: $font-size-global * 5 - 5 $all-zero !important;
     }
 }
 .u-cmn-padding-sidewise {
     padding: $all-zero $container-padding;
+}
+.u-no-side-padding {
+    padding-left: $all-zero;
+    padding-right: $all-zero;
+}
+.u-no-bot-padding {
+    padding-bottom: 0 !important;
 }
 .u-no-padding {
     padding: $all-zero;
@@ -473,6 +486,9 @@
         }
         a {
             color: $black-rgba-solid-lighten-40;
+            &:hover {
+               color: $black-rgba;
+            }
         }
         p {
             color: $black-rgba-solid-lighten-40;
