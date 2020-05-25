@@ -1,0 +1,82 @@
+// slider partial
+
+.c-slider {
+    .slick-arrow {
+        z-index: 5;
+    }
+    .slick-next{
+        right: $all-zero + 30;
+    }
+    .slick-prev{
+        left: $all-zero + 30;
+    }
+    .slick-list{
+        height: $smallick-grid-height-100;
+    }
+    .slick-track{
+        @extend .slick-list;
+    }
+    .slick-slide {
+        @extend .slick-list;
+        @extend .u-all-0;
+    }
+    .slick-dots{
+        @extend .u-bot-0;
+        li {
+            height: $all-zero + 20;
+            width: $font-size-global * 2 - 2;
+            margin: $all-zero $all-zero + 8;
+            @extend .u-transition-500;
+            button {
+                background-color: rgba($white-rgba, 0.5);
+                height: $all-zero + 1;
+                @extend .u-width-100;
+                @extend .u-no-padding;
+                @extend .u-display-block;
+                @extend .u-transition-500;
+                &:before {
+                    width: auto;
+                    height: auto;
+                    font-size: $all-zero;
+                    line-height: $all-zero;
+                }
+            }
+            &.slick-active {
+                button {
+                    height: $all-zero + 2;
+                    background-color: rgba($white-rgba, 1);
+                }
+            }
+        }
+    }
+    figure {
+        @extend .u-width-100;
+        @extend .u-height-100;
+        @extend .u-display-block;
+        img {
+            @extend .u-width-100;
+            @extend .u-height-100;
+            @extend .u-objfit-cover;
+            @extend .u-display-block;
+            @extend .u-obj-pos-center-middle;
+        }
+    }
+    &--banner {
+        margin-top: $smallick-grid-height-100vh / 5;
+        height: $smallick-grid-height-100vh / 2 + 8;
+        @extend .u-no-bot-margin;
+        @include breakpoint(sm) {
+            margin-top: $all-zero;
+            height: $smallick-grid-height-100vh;
+        }
+        .slick-next {
+            right: $smallick-grid-width-100 - 93;
+        }
+        .slick-prev {
+            left: $smallick-grid-width-100 - 93;
+        }
+        .slick-dots {
+            bottom: $all-zero + 15;
+        }
+    }
+}

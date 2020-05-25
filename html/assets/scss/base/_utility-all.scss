@@ -73,10 +73,10 @@
 
 // alignment
 .u-valign-middle {
+    @extend .u-width-100;
     @extend .u-display-table;
     @extend .u-block-elm-center;
-    width: $smallick-grid-width-100;
-    .u-valign-middle-inner {
+    &__inner {
         @extend .u-no-float;
         @extend .u-txt-valign-middle;
         @extend .u-display-table-cell;
@@ -189,6 +189,14 @@
 // transition
 .u-transition-500 {
     @include transition500();
+}
+.u-transition-1000 {
+    @include transition1000();
+}
+
+// transform / scale
+.u-scale-1point2 {
+    transform: scale(1.2);
 }
 
 
@@ -373,12 +381,9 @@
 
 // css triangle
 .u-css-triangle {
-    z-index: 6;
-    @extend .u-absolute;
+    //z-index: 6;
+    @extend .u-relative;
     @extend .u-display-block;
-    @include breakpoint(smd) {
-        display: none;
-    }
     &:before {
         content: "";
         width: 0;
@@ -395,15 +400,6 @@
             top: $all-zero - 11;
         }
     }
-    &--left2 {
-        &:before {
-            border-bottom-width: 0px;
-            border-bottom-width: 15px;
-            border-right: 15px solid darken($brand-primary, 15%);
-            bottom: $all-zero - 15;
-            @extend .u-left-0;
-        }
-    }
     &--right {
         @extend .u-right-0;
         @extend .u-bot-0;
@@ -416,7 +412,7 @@
         }
     }
     &__inner {
-        z-index: 10;
+        //z-index: 10;
         @extend .u-relative;
     }
 }
@@ -434,6 +430,44 @@
     }
     &--yellow {
         background-color: $brand-primary;
+    }
+}
+
+
+
+// triangle
+.u-bx-triangle {
+    @extend .u-relative;
+    @extend .u-oflowhidden;
+    &:before {
+        z-index: 1;
+        content: "";
+        @extend .u-absolute;
+        @extend .u-width-100;
+        @extend .u-height-100;
+        transform: skewY(12deg);
+    }
+    &--transform {
+
+    }
+    &--dark {
+        &:before {
+            background-color: $black-rgba;
+        }
+    }
+    &--midgray-type1 {
+        &:before {
+            background-color: $gray2-rgba;
+        }
+    }
+    &--light {
+        &:before {
+            background-color: $white-rgba;
+        }
+    }
+    &__inner {
+        z-index: 2;
+        @extend .u-relative;
     }
 }
 
@@ -492,6 +526,12 @@
         }
         p {
             color: $black-rgba-solid-lighten-40;
+        }
+    }
+    &--midgray-type2 {
+        @extend .u-vwtype--midgray-type1;
+        &__bgcolor {
+            background-color: $gray2-rgba;
         }
     }
     &--light {

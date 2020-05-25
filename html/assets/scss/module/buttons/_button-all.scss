@@ -189,6 +189,7 @@
 .c-arrowbtn {
     &--scrolltop {
         @extend .u-right-0;
+        @extend .u-display-none;
         @extend .u-transition-500;
         z-index: 100;
         color: $white-rgba;

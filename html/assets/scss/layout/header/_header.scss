@@ -1,6 +1,7 @@
 // header partial
 
 .o-header {
+    @extend .u-oflowhidden;
     .c-brand {
         height: $smallick-grid-height-100vh / 5;
         @extend .u-oflowhidden;
@@ -27,6 +28,9 @@
                     }
                 }
             }
+        }
+        @include breakpoint(sm) {
+            background-color: transparent;
         }
         @include breakpoint(md) {
             height: $smallick-grid-height-100vh / 4;

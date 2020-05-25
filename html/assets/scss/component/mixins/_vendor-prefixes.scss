@@ -219,6 +219,15 @@
     transition: $transition;
 }
 
+@mixin transition1000($transition: 1000ms ease-in-out) {
+    $prefixes:      ("-webkit", "-ms", "-o");
+    @each $prefix in $prefixes {
+        #{$prefix}-transition: $transition;
+    }
+
+    transition: $transition;
+}
+
 
 // User select
 // For selecting text on the page

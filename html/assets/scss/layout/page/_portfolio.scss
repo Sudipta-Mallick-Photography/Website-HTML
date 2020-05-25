@@ -9,6 +9,7 @@
             height: $smallick-grid-height-100vh / 3;
             margin-bottom: $all-zero + 1;
             @extend .u-display-block;
+            @extend .u-oflowhidden;
             @extend .u-relative;
             article {
                 @extend .u-relative;
@@ -21,6 +22,7 @@
                 }
                 img {
                     @extend .u-objfit-cover;
+                    @extend .u-transition-500;
                     @extend .u-obj-pos-center-middle;
                 }
                 header {
@@ -54,6 +56,12 @@
                             //@extend .c-box--bg-transparent--dark;
                             @extend .c-box--border-solid--opacity1;
                             @extend .c-box--nobg;
+                        }
+                    }
+                    figure {
+                        @extend .u-oflowhidden;
+                        img {
+                            @extend .u-scale-1point2;
                         }
                     }
                 }

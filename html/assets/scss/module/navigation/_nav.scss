@@ -30,9 +30,15 @@
         }
     }
     &--home {
-        padding-top: $font-size-global * 4 - 1;
-        margin-bottom: $font-size-global * 1.5;
+        // padding-top: $font-size-global * 2.5;
+        // margin-bottom: $font-size-global * 1.5;
+        margin-top: $font-size-global / 2 + 2;
         @extend .u-txt-capitalize;
+        @include breakpoint(sm) {
+            left: $all-zero + 30;
+            bottom: $all-zero + 30;
+            position: absolute;
+        }
     }
     &--darkbg {
 

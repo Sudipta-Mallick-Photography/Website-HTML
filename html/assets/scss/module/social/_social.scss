@@ -54,7 +54,12 @@
         }
     }
     &--home {
-        padding-bottom: $font-size-global * 2;
+        // padding-bottom: $font-size-global * 2;
+        @include breakpoint(sm) {
+            right: $all-zero + 30;
+            bottom: $all-zero + 36;
+            position: absolute;
+        }
     }
     &--header {
 

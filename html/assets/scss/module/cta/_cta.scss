@@ -1,0 +1,21 @@
+// All CTA partial
+
+.c-ctabx {
+    &--home {
+        height: $smallick-grid-height-100vh / 5 + 2;
+        @extend .u-bot-0;
+        @extend .u-left-0;
+        @extend .u-right-0;
+        @extend .u-absolute;
+        @extend .u-txtalign-center;
+        @include breakpoint(sm) {
+            background-color: transparent;
+            height: auto;
+        }
+        &__inner {
+            @include breakpoint(sm) {
+                display: block;
+            }
+        }
+    }
+}

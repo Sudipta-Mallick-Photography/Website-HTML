@@ -172,17 +172,26 @@
                 </section><!-- / overlay header inner -->
             </div><!-- / main nav box overlay -->
 
-            <section class="o-slider c-slider c-slider--banner" role="banner-slider-home" style="height: 45vh; margin-top: 20vh;">
+            <section class="o-slider c-slider c-slider--banner" role="banner-slider-home">
+                <figure>
+                    <img src="assets/images/flight.jpg" alt="" />
+                </figure>
+                <figure>
+                    <img src="assets/images/mosque-cleaner.jpg" alt="" />
+                </figure>
+                <figure>
+                    <img src="assets/images/motion-blur.jpg" alt="" />
+                </figure>
             </section><!-- / banner slider home page -->
 
-            <section class="u-contarea-100 u-vwtype--dark__bgcolor u-txtalign-center">
-                <section class="u-contarea-100__inner">
+            <section class="o-ctabx c-ctabx c-ctabx--home u-contarea-100 u-valign-middle u-vwtype u-vwtype--dark__bgcolor">
+                <section class="u-contarea-100__inner u-valign-middle__inner c-ctabx--home__inner">
                     <section class="o-ctanav c-ctanav">
                         <nav class="c-menu" role="cta-nav-home">
                             <ul class="c-nav c-nav--home c-nav--darkbg c-line c-line--under c-line--dark c-line--center">
-                                <li><a href="javascript:void(0);">About</a></li>
-                                <li><a href="javascript:void(0);">Portfolio</a></li>
-                                <li><a href="javascript:void(0);">Contact</a></li>
+                                <li><a href="#about-home">About</a></li>
+                                <li><a href="#portfolio-home">Portfolio</a></li>
+                                <li><a href="#contact-home">Contact</a></li>
                             </ul>
                         </nav>
                     </section><!-- / cta nav items home page -->
@@ -268,9 +277,9 @@
             </section><!-- / cta nav + social icons holder -->
         </header><!-- / header -->
         <section class="o-content c-content" role="main-content">
-            <section class="o-about" role="info-fotographer-home">
-                <section class="u-contarea-100">
-                    <section class="u-contarea-100__inner">
+            <section id="about-home" class="o-about u-vwtype u-vwtype--midgray-type2" role="info-fotographer-home">
+                <section class="u-vwtype--midgray-type2__bgcolor u-contarea-100 u-bx-triangle u-bx-triangle--light">
+                    <section class="u-contarea-100__inner u-bx-triangle__inner">
                         <section class="o-about__inner u-cmn-padding">
                             <header class="u-txtalign-center">
                                 <h1 class="c-title c-title--dark c-title--suptxt c-title--notopmargin c-bx-line c-bx-line--under c-bx-line--under--right c-bx-line--under--dark">
@@ -292,7 +301,7 @@
                     </section>
                 </section>
             </section><!-- / about the photographer -->
-            <section class="o-portfolio" role="portfolio-fotographer-home">
+            <section id="portfolio-home" class="o-portfolio" role="portfolio-fotographer-home">
                 <section class="u-contarea-100">
                     <section class="u-contarea-100__inner o-portfolio__holder">
                         <section class="o-portfolio__inner u-cmn-padding u-no-bot-padding">
@@ -428,7 +437,7 @@
                     </section>
                 </section>
             </section><!-- / portfolio -->
-            <section class="o-contact u-vwtype u-vwtype--midgray-type1" role="main-contact">
+            <section id="contact-home" class="o-contact u-vwtype u-vwtype--midgray-type1" role="main-contact">
                 <section class="u-vwtype--midgray-type1__bgcolor u-contarea-100">
                     <section class="u-contarea-100__inner">
                         <section class="o-contact__inner u-cmn-padding">
@@ -644,6 +653,8 @@
     <!-- <script src="js/@f4pjs-production/f4p-min.js"></script> -->
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/headroom.js"></script>
+    <script src="assets/js/jquery.scrollTo-.js"></script>
+    <script src="assets/js/slick.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- <script data-skip-moving="true">
         (function(w,d,u,b){
