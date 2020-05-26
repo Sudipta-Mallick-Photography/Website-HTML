@@ -30,6 +30,9 @@
             &:before {
                 //@extend .u-bot-0;
                 bottom: $all-zero + 5;
+                @include breakpoint(md) {
+                    bottom: $all-zero + 3;
+                }
             }
         }
     }

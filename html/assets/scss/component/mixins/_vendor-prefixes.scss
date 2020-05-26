@@ -134,6 +134,12 @@
        -o-transform: skewX($x) skewY($y);
           transform: skewX($x) skewY($y);
 }
+@mixin skew($y) {
+  -webkit-transform: skewY($y);
+      -ms-transform: skewY($y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
+       -o-transform: skewY($y);
+          transform: skewY($y);
+}
 @mixin translate($x, $y) {
   -webkit-transform: translate($x, $y);
       -ms-transform: translate($x, $y); // IE9 only

@@ -1,0 +1,12 @@
+// All bio partial
+
+
+.c-bio {
+    &--small {
+        @extend .u-display-none;
+        @include breakpoint(md) {
+            display: block;
+        }
+    }
+}
+

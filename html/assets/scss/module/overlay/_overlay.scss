@@ -1,40 +1,22 @@
 // Overlay partial
 
-.c-overlay {
-    @extend .u-absolute;
-    @extend .u-width-100;
-    @extend .u-height-100;
-    z-index: 5;
-    &:before {
-        content: "";
-        @extend .u-absolute;
+.c-ovrlay {
+
+    &--dark {
+        background-color: rgba($black-rgba, 0.85);
+    }
+    &--light {
+
+    }
+
+    &--header {
+        z-index: 21;
+        @extend .u-fixed;
         @extend .u-all-0;
     }
 
-
-    // overlay background color
-    &--black {
-        background-color: $black;
-    }
-    &--greenblue-gradient-v {
-        @extend .u-liner-greenblue-gradint-v;
-    }
-
-
-    // opacity
-    &--opacity23 {
-        opacity: 0.23;
-    }
-    &--opacity45 {
-        opacity: 0.45;
-    }
-    &--opacity40 {
-        opacity: 0.4;
-    }
-    &--opacity50 {
-        opacity: 0.5;
-    }
-    &--opacity60 {
-        opacity: 0.6;
+    &__inner {
+        z-index: 22;
+        @extend .u-relative;
     }
 }

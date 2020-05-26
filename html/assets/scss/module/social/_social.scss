@@ -59,6 +59,25 @@
             right: $all-zero + 30;
             bottom: $all-zero + 36;
             position: absolute;
+            li {
+                a {
+                    color: $white-rgba;
+                    svg {
+                        fill: $white-rgba;
+                    }
+                    &:hover {
+                        color: rgba($white-rgba, 0.5);
+                        svg {
+                            fill: rgba($white-rgba, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+        li {
+            a {
+
+            }
         }
     }
     &--header {
