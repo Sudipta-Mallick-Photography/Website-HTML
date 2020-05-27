@@ -13,10 +13,23 @@
         z-index: 21;
         @extend .u-fixed;
         @extend .u-all-0;
+        @extend %u-opacity-0;
+        @extend .u-visbltyhidden;
+        @extend .u-transition-500;
     }
 
     &__inner {
         z-index: 22;
         @extend .u-relative;
+    }
+    .c-brand {
+        &--header {
+            z-index: 23;
+        }
+    }
+
+    &.open {
+        @extend %u-opacity-1;
+        @extend .u-visbltyvisble;
     }
 }

@@ -78,6 +78,16 @@ $('a[href*="#"]')
 });
 
 
+// menu overlay
+(function($) {
+    $(function() {
+    $('.toggle-overlay').click(function() {
+        $('.o-mainnav-list').toggleClass('open');
+        });
+    });
+})(jQuery);
+
+
 // scroll to top
 $(document).ready(function(){
     $(window).scroll(function(){
@@ -93,5 +103,6 @@ $(document).ready(function(){
         return false;
     });
 });
+
 
 

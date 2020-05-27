@@ -80,6 +80,16 @@
             }
         }
     }
+    &--ovrlay {
+        bottom: $all-zero + 30;
+        @extend .u-left-0;
+        @extend .u-absolute;
+        @include breakpoint(sm) {
+            bottom: $all-zero + 36;
+            left: inherit;
+            right: $all-zero;
+        }
+    }
     &--header {
 
     }

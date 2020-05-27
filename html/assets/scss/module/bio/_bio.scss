@@ -3,9 +3,24 @@
 
 .c-bio {
     &--small {
+        font-size: $font-size-global - 2;
+        width: $smallick-grid-width-100 / 2;
+        line-height: $line-height-global - 2;
+        @extend .c-bx-line;
         @extend .u-display-none;
+        @extend .c-bx-line--left;
+        @extend .c-bx-line--left--midgray-type1;
         @include breakpoint(md) {
             display: block;
+            margin-top: $smallick-grid-height-100vh / 2.5;
+        }
+        @include breakpoint(lg) {
+            width: $smallick-grid-width-100 / 2 - 5;
+        }
+        p {
+            font-size: $font-size-global - 2;
+            line-height: $line-height-global - 2;
+            color: $black-rgba-solid-lighten-40;
         }
     }
 }

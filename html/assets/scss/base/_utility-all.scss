@@ -240,6 +240,14 @@
     overflow: hidden;
 }
 
+// visibility
+.u-visbltyhidden {
+    visibility: hidden;
+}
+.u-visbltyvisble {
+    visibility: visible;
+}
+
 
 // opacity
 %u-opacity-0 {
@@ -378,6 +386,12 @@
     text-align: left;
 }
 
+// skew
+
+// .u-skewY {
+//     @include transform(skew(#{$y}deg));
+// }
+
 
 // css triangle
 .u-css-triangle {
@@ -445,11 +459,18 @@
         @extend .u-absolute;
         @extend .u-width-100;
         @extend .u-height-100;
-        transform: skewY(12deg);
     }
-    &--transform {
+    &--ltr {
+        &:before {
+            transform: skewY(12deg);
+        }
+    }
+    &--rtl {
+        &:before {
+            transform: skewY(-20deg);
+        }
+    }
 
-    }
     &--dark {
         &:before {
             background-color: $black-rgba;
@@ -458,6 +479,12 @@
     &--midgray-type1 {
         &:before {
             background-color: $gray2-rgba;
+
+        }
+    }
+    &--midgray-type2 {
+        &:before {
+            background-color: $black-rgba-solid-lighten-12;
         }
     }
     &--light {
@@ -509,6 +536,9 @@
         &__bgcolor {
             background-color: $black-rgba;
         }
+        svg {
+            fill: $white-rgba;
+        }
     }
     &--midgray-type1 {
         color: $black-rgba-solid-lighten-25;
@@ -535,7 +565,15 @@
         }
     }
     &--light {
-
+        a {
+            color: $black-rgba;
+        }
+        &__bgcolor {
+            background-color: $white-rgba;
+        }
+        svg {
+            fill: $black-rgba;
+        }
     }
 }
 

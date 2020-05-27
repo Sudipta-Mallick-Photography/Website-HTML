@@ -1,6 +1,6 @@
 // input fields partial
 
-.o-form {
+.c-form {
     p {
         @extend .u-cmn-botmargin;
         &:last-child
@@ -24,13 +24,18 @@
     input[type="email"],
     input[type="search"],
     textarea {
-        background-color: $white;
-        color: $gray;
-        padding: $all-zero + 11 $all-zero + 20;
-        outline: none;
         @extend .u-no-border;
-        @extend .u-display-block;
         @extend .u-width-100;
+        @extend .u-transparent;
+        @extend .u-display-block;
+        outline: none;
+        border-bottom-style: solid !important;
+        padding: $all-zero + 6 $all-zero + 8;
+        border-bottom-width: $all-zero + 1 !important;
+        @include breakpoint(sm) {
+            padding: $all-zero + 10 $all-zero + 12;
+        }
+
     }
     textarea {
         height: $all-zero + 105;
@@ -39,87 +44,70 @@
     input,
     textarea {
         &::placeholder {
-            color: $gray;
             opacity: 1;
         }
-        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: $gray;
-        }
-        &::-ms-input-placeholder { /* Microsoft Edge */
-            color: $gray;
-        }
     }
-    &.o-form--membership {
-        input[type="text"],
-        input[type="url"],
-        input[type="tel"],
-        input[type="email"],
-        input[type="search"],
-        textarea {
-            border-bottom: rgba($white, 0.4) solid $all-zero + 1 !important;
-            color: $white;
-            padding: $all-zero + 5 $all-zero $all-zero + 10;
-            @extend .u-transparent;
-            @extend .u-transition-500;
-        }
-        textarea {
-            height: $all-zero + 65;
-        }
 
+    &--dark {
         input[type="text"],
         input[type="url"],
         input[type="tel"],
         input[type="email"],
         input[type="search"],
         textarea {
-            &:focus {
-                border-bottom: rgba($white, 0.8) solid $all-zero + 1 !important;
-            }
+            border-bottom-color: $white-rgba !important;
+            color: rgba($white-rgba, 0.8);
         }
 
         input,
         textarea {
             &::placeholder {
-                color: $input-color-placeholder;
-                opacity: 1;
+                color: rgba($white-rgba, 0.4);
             }
             &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-                color: $input-color-placeholder;
+                color: rgba($white-rgba, 0.4);
             }
             &::-ms-input-placeholder { /* Microsoft Edge */
-                color: $input-color-placeholder;
+                color: rgba($white-rgba, 0.4);
             }
         }
     }
-    &--newsletter {
-        &.o-form--footer {
-            input[type="email"] {
-                margin: $all-zero $all-zero - 3;
-                width: 65%;
-                @extend .u-display-in-block;
-                @extend .u-txt-valign-top;
+    &--light {
+        input[type="text"],
+        input[type="url"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="search"],
+        textarea {
+            border-bottom-color: $black-rgba !important;
+            color: rgba($black-rgba, 0.8);
+        }
+
+        input,
+        textarea {
+            &::placeholder {
+                color: rgba($black-rgba, 0.4);
             }
-            input[type="submit"] {
-                border-radius: 0;
-                font-weight: $weight-bold;
-                @extend .u-no-top-margin;
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: rgba($black-rgba, 0.4);
+            }
+            &::-ms-input-placeholder { /* Microsoft Edge */
+                color: rgba($black-rgba, 0.4);
             }
         }
     }
 }
 
-.search-form {
-    @extend .o-form;
-    input[type="search"] {
-        border: $gray-mid solid $all-zero + 1 !important;
+.c-search {
+    &--small {
+
     }
-    button {
-        @extend .u-no-border;
-        @extend .c-btn;
-        @extend .c-btn--blue;
-        //@extend .c-btn--volunteer;
-        svg {
-            display: none;
+    &--ovrlay {
+        bottom: $all-zero + 85;
+        @extend .u-left-0;
+        @extend .u-absolute;
+        @include breakpoint(sm) {
+            bottom: $all-zero + 36;
         }
     }
 }

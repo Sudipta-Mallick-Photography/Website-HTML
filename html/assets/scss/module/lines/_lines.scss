@@ -178,6 +178,11 @@
                 background-color: $black-rgba-solid-lighten-30;
             }
         }
+        &--midgray-type1 {
+            &:before {
+                background-color: $black-rgba-solid-lighten-60;
+            }
+        }
         &--light {
             &:before {
                 background-color: $white-rgba;

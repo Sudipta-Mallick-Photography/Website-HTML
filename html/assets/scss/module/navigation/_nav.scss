@@ -49,10 +49,16 @@
         }
     }
     &--main {
-        margin-top: $smallick-grid-height-100vh / 4;
+        // margin-top: $smallick-grid-height-100vh / 4;
         font-size: $font-size-global * 1.5 + 1;
         line-height: 1.1em;
         @extend .u-txtalign-right;
+        @include breakpoint(md) {
+            font-size: $font-size-global * 2 - 3;
+        }
+        @include breakpoint(lg) {
+            font-size: $font-size-global * 2.5;
+        }
         li {
             margin-bottom: 0.4em;
             @extend .u-width-100;
