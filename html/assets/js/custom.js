@@ -81,8 +81,17 @@ $('a[href*="#"]')
 // menu overlay
 (function($) {
     $(function() {
-    $('.toggle-overlay').click(function() {
+    $('.mainnav-overlay').click(function() {
         $('.o-mainnav-list').toggleClass('open');
+        });
+    });
+})(jQuery);
+
+// search box overlay
+(function($) {
+    $(function() {
+    $('.search-overlay').click(function() {
+        $('.o-search-box').toggleClass('open');
         });
     });
 })(jQuery);

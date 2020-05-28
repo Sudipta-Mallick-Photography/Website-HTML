@@ -71,6 +71,9 @@
                 color: rgba($white-rgba, 0.4);
             }
         }
+        svg {
+            fill: $white-rgba;
+        }
     }
     &--light {
         input[type="text"],
@@ -95,12 +98,19 @@
                 color: rgba($black-rgba, 0.4);
             }
         }
+        svg {
+            fill: $black-rgba;
+        }
     }
 }
 
 .c-search {
     &--small {
-
+        width: $font-size-global * 14;
+        //@extend .u-relative;
+        input[type="search"] {
+            padding-right: $font-size-global * 2.5;
+        }
     }
     &--ovrlay {
         bottom: $all-zero + 85;
@@ -108,6 +118,22 @@
         @extend .u-absolute;
         @include breakpoint(sm) {
             bottom: $all-zero + 36;
+        }
+    }
+    button {
+        top: $all-zero + 6;
+        @extend .u-right-0;
+        @extend .u-absolute;
+        @extend .u-no-border;
+        @extend .u-transparent;
+        @include breakpoint(sm) {
+            top: $all-zero + 12;
+        }
+        &.c-btn {
+            padding: $all-zero $all-zero + 10;
+            height: $font-size-global * 2 - 2;
+            line-height: $font-size-global * 2 - 2;
+            @extend .u-no-top-margin;
         }
     }
 }

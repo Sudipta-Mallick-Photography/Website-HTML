@@ -48,36 +48,6 @@
     }
 
 
-    // button colors
-    &--green {
-        background-color: $green-vibrant;
-        &:hover {
-            background-color: $green-vibrant-darken;
-            //color: $red !important;
-        }
-    }
-    &--yellow {
-        background-color: $brand-secondary;
-        &:hover {
-            background-color: $brand-secondary-darken;
-        }
-    }
-    &--blue {
-        background-color: $brand-primary;
-        &:hover {
-            background-color: $brand-primary-darken;
-        }
-    }
-    &--red {
-        background-color: $red;
-    }
-    // &--pink {
-    //     background-color: $brand-secondary;
-    //     &:hover {
-    //         background-color: $brand-secondary-darken;
-    //     }
-    // }
-
 
     // button labels
     &--label-gray {

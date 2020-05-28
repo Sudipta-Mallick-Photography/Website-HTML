@@ -216,8 +216,8 @@
           transition: transform $transition;
 }
 
-@mixin transition500($transition: 500ms ease-in-out) {
-    $prefixes:      ("-webkit", "-ms", "-o");
+@mixin transition500($transition: all 500ms ease-in-out) {
+    $prefixes:      ("-webkit", "-ms", "-o", "-moz");
     @each $prefix in $prefixes {
         #{$prefix}-transition: $transition;
     }
@@ -225,8 +225,8 @@
     transition: $transition;
 }
 
-@mixin transition1000($transition: 1000ms ease-in-out) {
-    $prefixes:      ("-webkit", "-ms", "-o");
+@mixin transition1000($transition: all 1000ms ease-in-out) {
+    $prefixes:      ("-webkit", "-ms", "-o", "-moz");
     @each $prefix in $prefixes {
         #{$prefix}-transition: $transition;
     }

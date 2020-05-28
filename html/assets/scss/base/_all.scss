@@ -16,6 +16,7 @@
 }
 
 a, button {
+    cursor: pointer;
     text-decoration: $link-decoration;
     @extend .u-transition-500;
     &:hover, &:focus {
