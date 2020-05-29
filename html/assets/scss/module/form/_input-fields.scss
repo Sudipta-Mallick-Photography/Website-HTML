@@ -120,6 +120,11 @@
             bottom: $all-zero + 36;
         }
     }
+    &--large {
+        bottom: inherit;
+        @extend .u-width-100;
+        @extend .u-translate-y50;
+    }
     button {
         top: $all-zero + 6;
         @extend .u-right-0;
