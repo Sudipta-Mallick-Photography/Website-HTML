@@ -453,12 +453,14 @@
 .u-bx-triangle {
     @extend .u-relative;
     @extend .u-oflowhidden;
+    @extend .u-transition-500;
     &:before {
         z-index: 1;
         content: "";
         @extend .u-absolute;
         @extend .u-width-100;
         @extend .u-height-100;
+        @extend .u-transition-500;
     }
     &--ltr {
         &:before {

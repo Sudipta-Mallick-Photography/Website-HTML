@@ -20,6 +20,9 @@
             @include breakpoint(md) {
                 margin-top: $all-zero + 12;
             }
+            a {
+                @extend .u-display-in-block;
+            }
             .c-hmbrgr-ic {
                 &--main {
                     margin-left: $all-zero + 18;

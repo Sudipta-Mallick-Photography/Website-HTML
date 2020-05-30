@@ -10,12 +10,13 @@
     }
 
     &--header {
-        z-index: 21;
+        z-index: 0;
         @extend .u-fixed;
         @extend .u-all-0;
         @extend %u-opacity-0;
-        @extend .u-visbltyhidden;
+        //@extend .u-visbltyhidden;
         @extend .u-transition-500;
+        //display: none;
     }
 
     &__inner {
@@ -29,7 +30,10 @@
     }
 
     &.open {
+        z-index: 21;
         @extend %u-opacity-1;
-        @extend .u-visbltyvisble;
+        //@extend .u-visbltyvisble;
+        @extend .u-transition-500;
+        //display: block;
     }
 }

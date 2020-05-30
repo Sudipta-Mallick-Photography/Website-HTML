@@ -3,14 +3,23 @@
 .o-portfolio {
     &__holder {
         @extend .u-no-side-padding;
+        @include breakpoint(md) {
+            padding: $all-zero $container-padding;
+        }
     }
     .c-portfolio {
+        @include breakpoint(md) {
+            overflow: hidden;
+        }
         &__item {
             height: $smallick-grid-height-100vh / 3;
             margin-bottom: $all-zero + 1;
             @extend .u-display-block;
             @extend .u-oflowhidden;
             @extend .u-relative;
+            @include breakpoint(md) {
+                float: left;
+            }
             article {
                 @extend .u-relative;
                 @extend .u-width-100;
@@ -68,6 +77,23 @@
             }
             &:last-child {
                 @extend .u-no-bot-margin;
+            }
+        }
+        &__type1 {
+            @include breakpoint(md) {
+                border: 1px solid red;
+                height: $font-size-global * 30;
+                width: $smallick-grid-width-100 / 2;
+            }
+        }
+        &__type2 {
+            @include breakpoint(md) {
+                border: 1px solid blue;
+            }
+        }
+        &__type3 {
+            @include breakpoint(md) {
+                border: 1px solid green;
             }
         }
     }
