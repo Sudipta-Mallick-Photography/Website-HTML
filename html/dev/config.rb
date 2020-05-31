@@ -17,7 +17,7 @@ preferred_syntax = :scss
 
 # no need cache
 asset_cache_buster = :none
-cache = true
+cache = false
 
 # source map
 sourcemap = true

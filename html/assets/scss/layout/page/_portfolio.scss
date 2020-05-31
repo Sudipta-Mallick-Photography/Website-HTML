@@ -19,6 +19,7 @@
             @extend .u-relative;
             @include breakpoint(md) {
                 float: left;
+                margin-bottom: $grid-gutter-width;
             }
             article {
                 @extend .u-relative;
@@ -62,7 +63,6 @@
                         h3 {
                             @extend .c-box--border-solid;
                             @extend .c-box--border-solid--light;
-                            //@extend .c-box--bg-transparent--dark;
                             @extend .c-box--border-solid--opacity1;
                             @extend .c-box--nobg;
                         }
@@ -81,14 +81,29 @@
         }
         &__type1 {
             @include breakpoint(md) {
-                border: 1px solid red;
-                height: $font-size-global * 30;
-                width: $smallick-grid-width-100 / 2;
+                height: $smallick-grid-height-100vh / 1.5;
+                width: $smallick-grid-width-100 / 2 - 1.5;
+                &:nth-of-type(2n) {
+                    float: right;
+                }
             }
         }
         &__type2 {
             @include breakpoint(md) {
-                border: 1px solid blue;
+                height: $smallick-grid-height-100vh / 4;
+                width: $smallick-grid-width-100 / 4 - 2;
+                &--set1 {
+                    float: right;
+                    &:nth-of-type(2) {
+                        margin-left: $smallick-grid-width-100 / 40;
+                    }
+                }
+                &--set2 {
+                    float: left;
+                    &--last {
+                        margin-left: $smallick-grid-width-100 / 40;
+                    }
+                }
             }
         }
         &__type3 {
