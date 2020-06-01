@@ -32,9 +32,6 @@
                 }
             }
         }
-        @include breakpoint(sm) {
-            background-color: transparent;
-        }
         @include breakpoint(md) {
             height: $smallick-grid-height-100vh / 4;
         }
@@ -51,6 +48,13 @@
         &.headroom--pinned {
             &.headroom--not-top {
                 background-color: $black-rgba-lighten-20;
+            }
+        }
+    }
+    &--frontpage {
+        .c-brand {
+            @include breakpoint(sm) {
+                background-color: transparent;
             }
         }
     }

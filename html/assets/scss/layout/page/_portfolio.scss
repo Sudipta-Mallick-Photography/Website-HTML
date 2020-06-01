@@ -16,10 +16,21 @@
             margin-bottom: $all-zero + 1;
             @extend .u-display-block;
             @extend .u-oflowhidden;
+            @extend .u-no-padding;
             @extend .u-relative;
             @include breakpoint(md) {
                 float: left;
-                margin-bottom: $grid-gutter-width;
+                margin-bottom: $smallick-grid-width-100 / 40;
+                &:before {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 1;
+                    content: "";
+                    position: absolute;
+                    border: $all-zero solid $white-rgba;
+                }
             }
             article {
                 @extend .u-relative;
@@ -58,6 +69,11 @@
                 }
             }
             &:hover {
+                @include breakpoint(md) {
+                    &:before {
+                        border: $all-zero + 10 solid $white-rgba;
+                    }
+                }
                 article {
                     header {
                         h3 {
@@ -71,6 +87,9 @@
                         @extend .u-oflowhidden;
                         img {
                             @extend .u-scale-1point2;
+                            @include breakpoint(md) {
+
+                            }
                         }
                     }
                 }
@@ -108,8 +127,28 @@
         }
         &__type3 {
             @include breakpoint(md) {
-                border: 1px solid green;
+                height: $smallick-grid-height-100vh / 1.81;
+                margin-right: $smallick-grid-width-100 / 40;
+                margin-bottom: $all-zero;
+                width: $smallick-grid-width-100 / 4 - 2;
+
+                &:nth-last-of-type(2) {
+                    width: $smallick-grid-width-100 / 2 - 1;
+                }
+                &:last-child {
+                    float: right;
+                    margin-right: $all-zero;
+                }
             }
+        }
+    }
+    &__inner {
+        @extend .u-no-bot-padding;
+        @include breakpoint(md) {
+            padding: $font-size-global * 3 + 7 $all-zero !important;
+        }
+        @include breakpoint(lg) {
+            padding: $font-size-global * 5 - 5 $all-zero !important;
         }
     }
 }
