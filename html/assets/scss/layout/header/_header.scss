@@ -58,4 +58,9 @@
             }
         }
     }
+    &--innrpagespcl {
+        @include breakpoint(sm) {
+            height: auto;
+        }
+    }
 }
