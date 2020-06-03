@@ -25,7 +25,6 @@
             @extend .u-relative;
             span {
                 padding-top: $all-zero + 6;
-                color: $white-rgba-solid-darken-60;
                 @extend .u-display-in-block;
                 @extend .u-no-bot-margin;
                 &:before,
@@ -39,6 +38,20 @@
         }
         @include breakpoint(sm) {
             text-align: center;
+        }
+        &--dark {
+            span {
+                span {
+                    color: $white-rgba-solid-darken-60;
+                }
+            }
+        }
+        &--light {
+            span {
+                span {
+                    color: $white-rgba;
+                }
+            }
         }
     }
 
@@ -57,7 +70,23 @@
     }
 
 
-    // type
+
+    // pages inner
+    &--page {
+        height: $smallick-grid-height-100vh / 2 - 20;
+        background-color: $black-rgba-solid-lighten-09;
+        @include breakpoint(sm) {
+            height: auto;
+            bottom: $all-zero;
+            position: absolute;
+            background-color: transparent;
+        }
+        .c-title {
+            @extend .u-no-bot-margin;
+        }
+    }
+
+    // page type
     &--404 {
         @include font-size($h1-404);
         span {

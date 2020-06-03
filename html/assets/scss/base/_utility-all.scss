@@ -503,6 +503,7 @@
 
 // container
 .u-contarea-100 {
+    @extend .u-relative;
     @extend .u-width-100;
     @extend .u-block-elm-center;
     @include breakpoint(md) {

@@ -1,21 +1,28 @@
 // All banner partial
 
-
-.c-banner {
-    @extend .u-bg-cover;
-    @extend .u-bg-norepeat;
-    @extend .u-bg-pos-center-middle;
-    &--top {
-        height: $smallick-grid-height-100vh / 2;
-        margin-top: $smallick-grid-height-100vh / 5;
-        @include breakpoint(sm) {
-            height: $smallick-grid-height-100vh / 2.5;
+.o-banner {
+    .c-banner {
+        @extend .u-bg-cover;
+        @extend .u-bg-norepeat;
+        @extend .u-bg-pos-center-middle;
+        &--top {
+            height: $smallick-grid-height-100vh / 2;
+            margin-top: $smallick-grid-height-100vh / 5;
+            @include breakpoint(sm) {
+                height: $smallick-grid-height-100vh / 2.5;
+            }
+            @include breakpoint(md) {
+                background-attachment: fixed;
+                height: $smallick-grid-height-100vh / 2.857142;
+                margin-top: $smallick-grid-height-100vh / 4;
+            }
         }
-        @include breakpoint(md) {
-            background-attachment: fixed;
-            height: $smallick-grid-height-100vh / 2.857142;
-            margin-top: $smallick-grid-height-100vh / 4;
+
+        &__inner {
+            @extend .u-height-100;
         }
     }
 }
+
+
 

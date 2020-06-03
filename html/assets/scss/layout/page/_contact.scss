@@ -32,6 +32,9 @@
         &__cred {
             margin-bottom: $font-size-global * 2 + 3;
             font-size: $font-size-global + 2;
+            .c-title {
+                @extend %u-opacity-1;
+            }
             p {
                 font-size: $font-size-global + 2;
             }
@@ -41,6 +44,11 @@
             @include breakpoint(sm) {
                 text-align: left;
                 width: $smallick-grid-width-100;
+            }
+            &:hover {
+                .c-title {
+                    opacity: 0.5;
+                }
             }
         }
         .c-phone {

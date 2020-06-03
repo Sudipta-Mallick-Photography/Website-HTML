@@ -21,6 +21,8 @@
             }
         }
     }
+
+    // themes
     &--dark {
         li {
             a {
@@ -53,6 +55,8 @@
             }
         }
     }
+
+    // positioned in home page / front page's header
     &--home {
         // padding-bottom: $font-size-global * 2;
         @include breakpoint(sm) {
@@ -80,6 +84,33 @@
             }
         }
     }
+
+    // positioned in inner page's header
+    &--innrpage {
+        @extend .u-absolute;
+        @extend .c-social--home;
+        right: $all-zero + 30;
+        bottom: $all-zero + 26;
+        @include breakpoint(sm) {
+            bottom: $all-zero + 32;
+        }
+        li {
+            a {
+                color: rgba($white-rgba, 0.8);
+                svg {
+                    fill: rgba($white-rgba, 0.8);
+                }
+                &:hover {
+                    color: rgba($white-rgba, 1);
+                    svg {
+                        fill: rgba($white-rgba, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    // positioned in overlay area
     &--ovrlay {
         bottom: $all-zero + 30;
         @extend .u-left-0;
@@ -90,9 +121,13 @@
             right: $all-zero;
         }
     }
+
+    // positioned in header area
     &--header {
 
     }
+
+    // positioned in footer area
     &--footer {
         margin-top: $font-size-global + 4;
         @include breakpoint(sm) {
