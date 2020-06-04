@@ -87,10 +87,11 @@
 
     // positioned in inner page's header
     &--innrpage {
-        @extend .u-absolute;
-        @extend .c-social--home;
+        z-index: 2;
         right: $all-zero + 30;
         bottom: $all-zero + 26;
+        @extend .u-absolute;
+        @extend .c-social--home;
         @include breakpoint(sm) {
             bottom: $all-zero + 32;
         }

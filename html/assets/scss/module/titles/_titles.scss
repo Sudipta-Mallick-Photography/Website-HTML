@@ -39,6 +39,18 @@
         @include breakpoint(sm) {
             text-align: center;
         }
+
+        // sup text low gap
+        &--lowgap > {
+            span {
+                margin-bottom: $font-size-global - 1;
+            }
+        }
+
+
+        // sup text themes
+
+        // dark theme
         &--dark {
             span {
                 span {
@@ -46,6 +58,7 @@
                 }
             }
         }
+        // light theme
         &--light {
             span {
                 span {
@@ -71,13 +84,22 @@
 
 
 
+    // titles in home page
+    &--h1-home {
+        @extend .h1-home;
+    }
+    &--h2-home {
+        @extend .h2-home;
+    }
+
     // pages inner
     &--page {
         height: $smallick-grid-height-100vh / 2 - 20;
         background-color: $black-rgba-solid-lighten-09;
         @include breakpoint(sm) {
+            z-index: 1;
             height: auto;
-            bottom: $all-zero;
+            bottom: $all-zero + 32;
             position: absolute;
             background-color: transparent;
         }

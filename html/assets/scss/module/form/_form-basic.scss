@@ -1,39 +1,3 @@
 // form basic partial
 
-.o-form {
-    &--membership {
-        header {
 
-        }
-        h2 {
-            @extend .u-no-bot-margin;
-            @extend .c-title-h2-home;
-            @extend .u-txt-uppercase;
-        }
-        h3 {
-            margin-bottom: $all-zero + 5;
-            @extend .u-txt-uppercase;
-        }
-        p {
-            font-size: $font-size-global - 2;
-        }
-        &__inner {
-            p {
-                margin-bottom: $all-zero + 10;
-            }
-        }
-        input[type="submit"] {
-            margin-top: $all-zero + 10;
-        }
-    }
-    &--newsletter {
-
-    }
-}
-
-input[type="submit"] {
-    outline: none;
-    @extend .u-no-border;
-    @extend .u-transition-500;
-    //@extend .u-txt-capitalize;
-}

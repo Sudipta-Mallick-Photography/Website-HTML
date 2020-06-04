@@ -1,42 +1,154 @@
 // Awards and Exhibitions page partial
 
-.c-events {
-    article {
-        margin-bottom: $all-zero + 25;
-        width: $smallick-grid-width-100 / 1.06;
-        //@extend .u-oflowhidden;
-        > div {
-            @extend .u-relative;
-        }
-        &:last-child {
-            @extend .u-no-bot-margin;
-        }
+.o-awards {
+
+    // awards holder
+    &__holder {
+
     }
-    iframe {
-        height: $all-zero + 300;
-        margin-bottom: $all-zero + 20;
-        @extend .u-display-block;
-        @extend .u-width-100;
-        @extend .u-height-100;
+    &__inner {
+
     }
-    &__meta {
-        background-color: $brand-primary;
-        color: $white;
-        padding: $all-zero + 15 $all-zero + 18;
-        left: $all-zero - 15;
-        bottom: $all-zero + 30;
-        @extend .u-display-in-block;
-        @extend .u-absolute;
-        a {
-            color: $white;
-        }
-        svg {
-            fill {
-                color: $white;
+
+    // awards and exhibitions common
+    .c-recog {
+
+        // individual awarded item
+        &__item {
+
+            // name/title of the organiser
+            header {
+                .c-title {
+
+                }
+            }
+
+            // awarded item details
+            &__details {
+
+            }
+
+            // logo/brand of the organiser
+            &__logo-organisr {
+
+            }
+
+            // individual contest
+            &__contst {
+
+                // individual contest details .. eg. description + links etc.
+                &__detls {
+
+                }
+
+                // details of the awarded/nominated image in the respective contest
+                &__img {
+
+                    // image details holder
+                    &__detls {
+
+                        // selected image name
+                        &__name {
+
+                            // holder
+                            div {
+
+                            }
+
+                            // label
+                            label {
+
+                            }
+
+                            // desc
+                            p {
+
+                            }
+                        }
+
+
+                        // name of the contest
+                        &__contestname {
+
+                            // holder
+                            div {
+
+                            }
+
+                            // label
+                            label {
+
+                            }
+
+                            // desc
+                            p {
+
+                            }
+                        }
+
+
+                        // type of the award
+                        &__awardtype {
+
+                            // holder
+                            div {
+
+                            }
+
+                            // label
+                            label {
+
+                            }
+
+                            // desc
+                            p {
+
+                            }
+
+                        }
+
+
+                        // link / URL of the selected image
+                        &__link {
+
+                            // holder
+                            div {
+
+                            }
+
+                            // label
+                            label {
+
+                            }
+
+                            // desc
+                            p {
+
+                            }
+                        }
+                    }
+
+
+                    // only the image
+                    section {
+                        figure {
+                            img {
+
+                            }
+                        }
+                    }
+                }
             }
         }
-        + p {
-            @extend .u-no-bot-margin;
-        }
+    }
+
+    // awards only
+    .c-awards {
+
+    }
+
+    // exhibitions only
+    .c-exhibitions {
+
     }
 }

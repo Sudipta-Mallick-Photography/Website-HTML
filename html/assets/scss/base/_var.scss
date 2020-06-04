@@ -172,46 +172,57 @@ $instagram: #833ab4;
 $font-size-global: 16px;
 $line-height-global: 24px;
 
+
+// h1
 $h1-font-sizes: (
-  null  : 32px,
-  480px : 38px,
-  768px : 44px,
-  992px : 50px,
-  1200px: 60px,
-  1440px: 60px
+  null  : 28px,
+  320px : 28px,
+  480px : 30px,
+  768px : 30px,
+  992px : 32px,
+  1200px: 34px,
+  1440px: 40px
 );
 $h1-home: (
-  null  : 34px,
-  480px : 40px,
-  768px : 46px,
-  992px : 60px,
-  1200px: 72px,
+  null  : 30px,
+  320px : 30px,
+  480px : 36px,
+  768px : 44px,
+  992px : 54px,
+  1200px: 64px,
   1440px: 72px
 );
 $h1-404: (
   null  : 34px,
+  320px : 34px,
   480px : 40px,
   768px : 46px,
   992px : 48px,
   1200px: 50px,
   1440px: 60px
 );
+
+// h2
 $h2-font-sizes: (
   null  : 26px,
+  320px : 26px,
   480px : 26px,
+  768px : 28px,
+  992px : 30px,
+  1200px: 32px,
+  1440px: 34px
+);
+$h2-home: (
+  null  : 26px,
+  320px : 26px,
+  480px : 28px,
   768px : 32px,
   992px : 38px,
   1200px: 46px,
   1440px: 50px
 );
-$h2-home: (
-  null  : 22px,
-  480px : 24px,
-  768px : 28px,
-  992px : 30px,
-  1200px: 30px,
-  1440px: 30px
-);
+
+// h3
 $h3-font-sizes: (
   null  : 20px,
   320px : 20px,
@@ -222,14 +233,16 @@ $h3-font-sizes: (
   1440px: 20px
 );
 $h3-home: (
-  null  : 20px,
-  320px : 20px,
-  480px : 20px,
-  768px : 20px,
-  992px : 20px,
-  1200px: 20px,
-  1440px: 20px
+  null  : 24px,
+  320px : 24px,
+  480px : 24px,
+  768px : 28px,
+  992px : 32px,
+  1200px: 38px,
+  1440px: 42px
 );
+
+// h4
 $h4-font-sizes: (
   null  : 16px,
   320px : 16px,
@@ -248,6 +261,8 @@ $h4-home: (
   1200px: 16px,
   1440px: 16px
 );
+
+// h5
 $h5-font-sizes: (
   null  : 20px,
   320px : 20px,
@@ -257,6 +272,8 @@ $h5-font-sizes: (
   1200px: 30px,
   1440px: 46px
 );
+
+// h6
 $h6-font-sizes: (
   null  : 20px,
   320px : 20px,
@@ -267,10 +284,12 @@ $h6-font-sizes: (
   1440px: 46px
 );
 
+
 // Bottom margin of heading elements
 
 $h1-margin-bottom: (
   null  : 32px,
+  320px : 32px,
   480px : 38px,
   768px : 42px,
   992px : 45px,
@@ -279,6 +298,7 @@ $h1-margin-bottom: (
 );
 $h2-margin-bottom: (
   null  : 24px,
+  320px : 24px,
   480px : 26px,
   768px : 30px,
   992px : 35px,
@@ -287,6 +307,7 @@ $h2-margin-bottom: (
 );
 $h3-margin-bottom: (
   null  : 15px,
+  320px : 15px,
   480px : 20px,
   768px : 20px,
   992px : 25px,

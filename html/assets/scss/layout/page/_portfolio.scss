@@ -53,6 +53,7 @@
                     @extend .u-txtalign-center;
                     h3 {
                         z-index: 6;
+                        font-size: $font-size-global + 4;
                         @extend .c-box;
                         @extend .c-title;
                         @extend .c-title--light;
