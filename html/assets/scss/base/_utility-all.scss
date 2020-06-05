@@ -467,9 +467,19 @@
             transform: skewY(12deg);
         }
     }
+    &--ltr2 {
+        &:before {
+            transform: skewY(30deg);
+        }
+    }
     &--rtl {
         &:before {
             transform: skewY(-20deg);
+        }
+    }
+    &--rtl2 {
+        &:before {
+            transform: skewY(-30deg);
         }
     }
 

@@ -4,7 +4,10 @@
 
     // awards holder
     &__holder {
-
+        @extend .u-no-side-padding;
+        @include breakpoint(sm) {
+            padding: $all-zero $container-padding;
+        }
     }
     &__inner {
 
@@ -15,6 +18,34 @@
 
         // individual awarded item
         &__item {
+            @extend .u-bx-triangle;
+            @extend .u-bx-triangle--rtl2;
+            @extend .u-bx-triangle--light;
+            // @extend .u-cmn-padding-sidewise;
+            margin-bottom: $all-zero + 1;
+            background-color: $gray1-rgba;
+            padding-top: $font-size-global * 2.5;
+            padding-bottom: $font-size-global * 2.5;
+            @include breakpoint(md) {
+                margin-bottom: $font-size-global * 3 + 7;
+            }
+            @include breakpoint(lg) {
+                margin-bottom: $font-size-global * 5 - 5;
+                padding-top: $font-size-global * 5;
+                padding-bottom: $font-size-global * 5;
+            }
+
+            article {
+                @extend .u-bx-triangle__inner;
+                @extend .u-cmn-padding-sidewise;
+                @include breakpoint(lg) {
+                    padding-left: $font-size-global * 5.5 + 2;
+                    padding-right: $font-size-global * 5.5 + 2;
+                }
+                h3 {
+                    @extend .u-no-top-margin;
+                }
+            }
 
             // name/title of the organiser
             header {
@@ -138,6 +169,9 @@
                         }
                     }
                 }
+            }
+            &:nth-of-type(2n) {
+                //@extend .u-bx-triangle--rtl2;
             }
         }
     }
