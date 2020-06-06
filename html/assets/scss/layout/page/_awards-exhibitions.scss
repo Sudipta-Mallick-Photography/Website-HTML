@@ -26,21 +26,25 @@
             background-color: $gray1-rgba;
             padding-top: $font-size-global * 2.5;
             padding-bottom: $font-size-global * 2.5;
+            @include breakpoint(sm) {
+
+            }
             @include breakpoint(md) {
+                border: $all-zero + 1 solid $gray1-rgba;
                 margin-bottom: $font-size-global * 3 + 7;
             }
             @include breakpoint(lg) {
                 margin-bottom: $font-size-global * 5 - 5;
-                padding-top: $font-size-global * 5;
-                padding-bottom: $font-size-global * 5;
+                padding-top: $font-size-global * 4 - 4;
+                padding-bottom: $font-size-global * 4 - 4;
             }
 
             article {
                 @extend .u-bx-triangle__inner;
                 @extend .u-cmn-padding-sidewise;
                 @include breakpoint(lg) {
-                    padding-left: $font-size-global * 5.5 + 2;
-                    padding-right: $font-size-global * 5.5 + 2;
+                    padding-left: $font-size-global * 4 + 1;
+                    padding-right: $font-size-global * 4 + 1;
                 }
                 h3 {
                     @extend .u-no-top-margin;
@@ -77,6 +81,52 @@
 
                     // image details holder
                     &__detls {
+                        font-size: $font-size-global + 2;
+                        font-weight: $weight-normal;
+                        @include breakpoint(sm) {
+                            letter-spacing: $all-zero + 1;
+                        }
+
+                        section {
+                            margin-bottom: $font-size-global / 2 - 3;
+                            @extend .u-oflowhidden;
+                            @include breakpoint(md) {
+                                margin-bottom: $all-zero + 3;
+                            }
+                            div {
+                                // @extend .u-display-in-block;
+                                // @extend .u-txt-valign-top;
+                                @extend .u-float-left;
+                            }
+                        }
+
+                        p {
+                            font-weight: $weight-normal;
+                            color: rgba($black-rgba, 0.8);
+                            font-size: $font-size-global + 2;
+                            font-family: $headings-font-family;
+                            @extend .u-display-block;
+                            @extend .u-no-bot-margin;
+                        }
+
+                        label {
+                            @extend p;
+                            @extend .u-relative;
+                            color: rgba($black-rgba, 0.5);
+                            margin-right: $font-size-global - 6;
+                            @include breakpoint(md) {
+                                width: $font-size-global * 8 + 7;
+                            }
+                            &:before {
+                                @extend .u-absolute;
+                                @extend .u-bg-norepeat;
+                                content: "";
+                                width: $all-zero + 40;
+                                height: $all-zero + 40;
+                                background-image: url('../images/icons-sprite.png');
+                            }
+                        }
+
 
                         // selected image name
                         &__name {
@@ -88,7 +138,9 @@
 
                             // label
                             label {
-
+                                &:before {
+                                    @extend .u-bg-pos-left-top;
+                                }
                             }
 
                             // desc
@@ -108,7 +160,9 @@
 
                             // label
                             label {
-
+                                &:before {
+                                    background-position: $all-zero $all-zero - 40;
+                                }
                             }
 
                             // desc
@@ -172,6 +226,9 @@
             }
             &:nth-of-type(2n) {
                 //@extend .u-bx-triangle--rtl2;
+            }
+            &:last-child {
+                @extend .u-no-bot-margin;
             }
         }
     }

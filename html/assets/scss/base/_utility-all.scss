@@ -95,6 +95,9 @@
 }
 
 // positions
+.u-bg-pos-left-top {
+    background-position: $all-zero;
+}
 .u-bg-pos-center-middle {
     background-position: $smallick-grid-width-100 / 2 $smallick-grid-width-100 / 2;
 }
