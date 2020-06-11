@@ -70,9 +70,15 @@
                 width: $font-size-global * 6 + 2;
                 @extend .u-right-0;
                 @extend .u-absolute;
+                @include breakpoint(xxs) {
+                    width: $font-size-global * 7.5;
+                }
                 @include breakpoint(sm) {
+                    width: $font-size-global * 9 + 6;
+                    // top: $all-zero - 40;
+                }
+                @include breakpoint(md) {
                     width: auto;
-                    top: $all-zero - 40;
                 }
                 @include breakpoint(lg) {
                     top: $all-zero - 60;
@@ -86,7 +92,10 @@
 
             // individual contest
             &__contst {
-
+                margin-bottom: $font-size-global * 2.5;
+                &:last-child {
+                    @extend .u-no-bot-margin;
+                }
                 // individual contest details .. eg. description + links etc.
                 &__detls {
 
@@ -95,6 +104,9 @@
                 // details of the awarded/nominated image in the respective contest
                 &__img {
                     margin-bottom: $font-size-global * 2.5;
+                    &:last-child {
+                        @extend .u-no-bot-margin;
+                    }
                     // image details holder
                     &__detls {
                         font-size: $font-size-global + 2;
@@ -275,17 +287,24 @@
 
                     // only the image
                     &__figure {
+                        margin-top: $font-size-global * 2 - 2;
+                        padding-left: $font-size-global * 2 + 3;
                         @include breakpoint(md) {
+                            margin-top: $all-zero;
                             display: inline-block;
                             vertical-align: middle;
+                            padding-left: $all-zero;
                         }
                         figure {
                             padding: $all-zero + 8;
                             background-color: $white-rgba;
                             width: $font-size-global * 8 - 3;
-                            //box-shadow: $all-zero, $all-zero, $all-zero, rgba($black-rgba, 0.2);
+                            @extend .u-figure-bx-shadow;
+                            a {
+                                @extend .u-display-block;
+                            }
                             img {
-
+                                @extend .u-display-block;
                             }
                         }
                     }

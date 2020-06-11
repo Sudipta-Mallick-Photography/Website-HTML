@@ -114,4 +114,15 @@ $(document).ready(function(){
 });
 
 
+$( document ).ready(function() {
+
+  /* Basic Gallery */
+  $( '.swipebox' ).swipebox();
+
+
+});
+
+
+
+
 
