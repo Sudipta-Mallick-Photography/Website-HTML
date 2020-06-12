@@ -46,8 +46,16 @@
     @media (min-width: 1200px) { @content; }
   }
 
+  @else if $class == lgx {
+    @media (max-width: 1399px) { @content; }
+  }
+
+  @else if $class == xlg {
+    @media (min-width: 1400px) { @content; }
+  }
+
   @else {
-    @warn "Breakpoint mixin supports: sxs, xxs, xs, sm, smd, md, mlg, lg";
+    @warn "Breakpoint mixin supports: sxs, xxs, xs, sm, smd, md, mlg, lg, lgx, xlg";
   }
 }
 

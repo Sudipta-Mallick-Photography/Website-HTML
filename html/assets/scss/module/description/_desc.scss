@@ -1,0 +1,74 @@
+// All descriptions partial
+
+.c-desc {
+    color: rgba($black-rgba, 0.6);
+    @extend .u-relative;
+    @include breakpoint(xxs) {
+        letter-spacing: $all-zero + 1;
+    }
+    p {
+        color: rgba($black-rgba, 0.6);
+    }
+
+    //
+    &--type1 {
+        @extend .u-width-100;
+        @extend .u-block-elm-center;
+        @include breakpoint(sm) {
+            width: $smallick-grid-width-100 / 1.25;
+        }
+    }
+
+    // desc with quotes
+    &--quotes {
+        quotes: "“" "”" "‘" "’";
+        &:before,
+        &:after {
+            content: "";
+            @extend .u-absolute;
+        }
+
+        // quotes over the desc area
+        &--over {
+            &:before {
+                @extend .u-top-0;
+            }
+
+            // quotes pointed to the top left
+            &--left {
+                &:before {
+                    content: open-quote;
+                    @extend .u-left-0;
+                }
+            }
+
+            // quotes pointed to the top right
+            &--right {
+                &:before {
+                    @extend .u-right-0;
+                }
+            }
+        }
+
+        // quotes under the desc area
+        &--under {
+            &:after {
+                @extend .u-bot-0;
+            }
+            // quotes pointed to the bottom left
+            &--left {
+                &:after {
+                    @extend .u-left-0;
+                }
+            }
+
+            // quotes pointed to the bottom right
+            &--right {
+                &:after {
+                    @extend .u-right-0;
+                }
+            }
+        }
+    }
+}
+

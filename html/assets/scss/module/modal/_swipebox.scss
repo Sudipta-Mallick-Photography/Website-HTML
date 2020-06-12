@@ -140,6 +140,10 @@ html.swipebox-html.swipebox-touch {
 	display:block;
 	width: 100%;
 	text-align: center;
+	letter-spacing: $all-zero + 1;
+	font-family: $headings-font-family;
+	@extend .u-txt-capitalize;
+	@extend .u-txt-smallcaps;
 }
 
 #swipebox-prev,
@@ -312,7 +316,6 @@ html.swipebox-html.swipebox-touch {
 #swipebox-top-bar {
 	//border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	color: white!important;
-	font-size: 15px;
-	line-height: 43px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-size: $font-size-global + 4;
+	line-height: $font-size-global * 3 + 2;
 }
