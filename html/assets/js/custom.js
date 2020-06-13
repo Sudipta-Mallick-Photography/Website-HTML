@@ -19,7 +19,7 @@ headroom.init();
 
     //$('.button-collapse').sideNav();
     //$('.parallax').parallax();
-    $(".c-slider").slick({
+    $(".c-slider--banner").slick({
         dots: true,
         dotsClass: 'slick-dots',
         autoplay: true,
@@ -114,6 +114,7 @@ $(document).ready(function(){
 });
 
 
+// swipe box modal
 $( document ).ready(function() {
 
   /* Basic Gallery */
@@ -122,6 +123,37 @@ $( document ).ready(function() {
 
 });
 
+
+// swiper slider
+var swiper1 = new Swiper('.c-slider--seriesprojects', {
+    zoom: true,
+    pagination: '.swiper-pagination1',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    paginationClickable: true,
+    slidesPerView: 2,
+    spaceBetween: 1,
+    //Enable Scrollbar
+    scrollbar: '.swiper-scrollbar',
+    hide: false,
+    draggable: true,
+    snapOnRelease: true,
+    mousewheel: true,
+    breakpoints: {
+    768: {
+            slidesPerView: 2,
+            spaceBetween: 1,
+        },
+    640: {
+            slidesPerView: 1,
+            spaceBetween: 1,
+        },
+    320: {
+            slidesPerView: 1,
+            spaceBetween: 1,
+        }
+    }
+});
 
 
 

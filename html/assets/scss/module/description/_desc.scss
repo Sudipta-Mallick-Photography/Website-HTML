@@ -8,10 +8,12 @@
     }
     p {
         color: rgba($black-rgba, 0.6);
+        margin-bottom: $font-size-global * 1.5;
     }
 
     //
     &--type1 {
+        padding-top: $font-size-global * 3.5;
         @extend .u-width-100;
         @extend .u-block-elm-center;
         @include breakpoint(sm) {
@@ -38,7 +40,21 @@
             &--left {
                 &:before {
                     content: open-quote;
-                    @extend .u-left-0;
+                    left: $all-zero - 10;
+                    color: rgba($black-rgba, 0.1);
+                    font-size: $font-size-global * 8.75;
+                    line-height: $font-size-global * 6 + 4;
+                    font-family: "Times New Roman", Times, serif;
+                    //@extend .u-left-0;
+                    @include breakpoint(sm) {
+                        left: $all-zero - 70;
+                    }
+                    @include breakpoint(lg) {
+                        left: $all-zero - 100;
+                        top: $all-zero - 10 !important;
+                        font-size: $font-size-global * 13;
+                        line-height: $font-size-global * 8.75;
+                    }
                 }
             }
 

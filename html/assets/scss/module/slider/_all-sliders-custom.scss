@@ -1,4 +1,4 @@
-// slider partial
+// all sliders partial
 
 .c-slider {
     .slick-arrow {
@@ -79,6 +79,55 @@
             bottom: $all-zero + 15;
             @include breakpoint(sm) {
                 bottom: $all-zero + 30;
+            }
+        }
+    }
+
+    &--seriesprojects {
+        &__slide {
+            height: $smallick-grid-height-100vh / 1.666;
+            @extend .u-contarea-100;
+            @extend .u-display-block;
+            article {
+                @extend .u-height-100;
+                @extend .u-no-side-padding;
+                @extend .u-contarea-100__inner;
+                @include breakpoint(md) {
+                    width: $smallick-grid-width-100;
+                    max-width: $smallick-grid-width-100;
+                }
+                header {
+                    z-index: 2;
+                    left: $all-zero + 30;
+                    right: $all-zero + 30;
+                    bottom: $all-zero + 60;
+                    @extend .u-absolute;
+                    @include breakpoint(md) {
+                        left: calc(10% + 30px);
+                        right: calc(10% + 30px);
+                    }
+                    h3 {
+                        @extend .u-no-bot-margin;
+                        &.c-title {
+                            &--suptxt {
+                                font-variant: none;
+                                span {
+                                    font-family: $headings-font-family;
+                                    margin-bottom: $all-zero + 14;
+                                    letter-spacing: $all-zero + 1;
+                                    @extend .u-txt-lowercase;
+                                }
+                            }
+                        }
+                    }
+                }
+                figure {
+                    z-index: 1;
+                    @extend .u-absolute;
+                }
+            }
+            &:hover {
+
             }
         }
     }
