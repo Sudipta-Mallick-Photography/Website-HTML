@@ -125,11 +125,22 @@ $( document ).ready(function() {
 
 
 // swiper slider
+
+// Init Swiper
+
 var swiper1 = new Swiper('.c-slider--seriesprojects', {
     zoom: true,
-    pagination: '.swiper-pagination1',
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
+    pagination: {
+      el: '.swiper-pagination1',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    //pagination: '.swiper-pagination1',
+    //extButton: '.swiper-button-next',
+    //prevButton: '.swiper-button-prev',
     paginationClickable: true,
     slidesPerView: 2,
     spaceBetween: 1,
@@ -154,6 +165,8 @@ var swiper1 = new Swiper('.c-slider--seriesprojects', {
         }
     }
 });
+
+
 
 
 

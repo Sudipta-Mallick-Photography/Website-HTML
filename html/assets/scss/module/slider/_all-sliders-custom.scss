@@ -90,6 +90,7 @@
             @extend .u-display-block;
             article {
                 @extend .u-height-100;
+                @extend .u-oflowhidden;
                 @extend .u-no-side-padding;
                 @extend .u-contarea-100__inner;
                 @include breakpoint(md) {
@@ -101,19 +102,39 @@
                     left: $all-zero + 30;
                     right: $all-zero + 30;
                     bottom: $all-zero + 60;
+                    margin-top: $all-zero - 10;
                     @extend .u-absolute;
+                    &:after {
+                        z-index: 3;
+                        content: "";
+                        margin-top: $all-zero - 10;
+                        height: $smallick-grid-height-100 * 1.3;
+                        background-color: rgba($black-rgba, 0.7);
+                        width: $all-zero + 1;
+                        left: $all-zero - 30;
+                        @extend .u-absolute;
+                        @extend %u-opacity-0;
+                        //@extend .u-height-100;
+                        @extend .u-transition-500;
+                        @include breakpoint(md) {
+                            left: -21%;
+                        }
+                    }
                     @include breakpoint(md) {
                         left: calc(10% + 30px);
                         right: calc(10% + 30px);
                     }
                     h3 {
+                        z-index: 4;
+                        @extend .u-relative;
+                        @extend .u-txtalign-left;
                         @extend .u-no-bot-margin;
                         &.c-title {
                             &--suptxt {
                                 font-variant: none;
                                 span {
                                     font-family: $headings-font-family;
-                                    margin-bottom: $all-zero + 14;
+                                    margin-bottom: $all-zero + 10;
                                     letter-spacing: $all-zero + 1;
                                     @extend .u-txt-lowercase;
                                 }
@@ -127,8 +148,53 @@
                 }
             }
             &:hover {
-
+                header {
+                    h3 {
+                        &.c-title {
+                        }
+                    }
+                    &:after {
+                        right: $all-zero - 30;
+                        @extend %u-opacity-1;
+                        @extend .u-width-100;
+                        @include breakpoint(md) {
+                            right: -21%;
+                        }
+                    }
+                }
             }
         }
     }
+}
+
+
+.swiper-pagination1 {
+    &.swiper-pagination-clickable {
+        &.swiper-pagination-bullets {
+            @extend .slick-dots;
+            z-index: 2;
+            bottom: $all-zero + 20;
+            span {
+                &.swiper-pagination-bullet {
+                    border-radius: $all-zero;
+                    height: $all-zero + 1;
+                    width: $all-zero + 30;
+                    margin: $all-zero $all-zero + 8;
+                    background-color: rgba($white-rgba, 0.5);
+                    @extend %u-opacity-1;
+                    @extend .u-no-padding;
+                    @extend .u-display-in-block;
+                    @extend .u-transition-500;
+                    &.swiper-pagination-bullet-active {
+                        height: $all-zero + 2;
+                        background-color: rgba($white-rgba, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+.swiper-button-prev,
+.swiper-button-next {
+
 }
