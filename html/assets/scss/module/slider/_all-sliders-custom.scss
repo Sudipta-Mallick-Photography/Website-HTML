@@ -85,9 +85,12 @@
 
     &--seriesprojects {
         &__slide {
-            height: $smallick-grid-height-100vh / 1.666;
+            height: $smallick-grid-height-100vh / 1.428;
             @extend .u-contarea-100;
             @extend .u-display-block;
+            @include breakpoint(sm) {
+                height: $smallick-grid-height-100vh / 1.666;
+            }
             article {
                 @extend .u-height-100;
                 @extend .u-oflowhidden;
@@ -196,5 +199,30 @@
 }
 .swiper-button-prev,
 .swiper-button-next {
-
+    background-color: rgba($black-rgba, 0.3);
+    background-size: $smallick-grid-width-100 / 5;
+    top: $smallick-grid-width-100 / 5;
+    padding-top: $all-zero + 25;
+    padding-bottom: $all-zero + 25;
+    @extend .u-absolute;
+    @include breakpoint(lg) {
+        background-size: $smallick-grid-width-100 / 6.666;
+    }
+    &:hover {
+        background-color: rgba($black-rgba, 0.7);
+    }
+}
+.swiper-button-prev {
+    left: $all-zero;
+    padding-left: $all-zero + 60;
+    @include breakpoint(lg) {
+        padding-left: $all-zero + 80;
+    }
+}
+.swiper-button-next {
+    right: $all-zero;
+    padding-right: $all-zero + 60;
+    @include breakpoint(lg) {
+        padding-right: $all-zero + 80;
+    }
 }
