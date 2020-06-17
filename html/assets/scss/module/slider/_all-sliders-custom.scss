@@ -61,6 +61,8 @@
             @extend .u-obj-pos-center-middle;
         }
     }
+
+    // slider for home page
     &--banner {
         margin-top: $smallick-grid-height-100vh / 5;
         height: $smallick-grid-height-100vh / 2 + 8;
@@ -83,6 +85,7 @@
         }
     }
 
+    // slider for series projects page
     &--seriesprojects {
         &__slide {
             height: $smallick-grid-height-100vh / 1.428;
@@ -163,6 +166,11 @@
                         @include breakpoint(md) {
                             right: -21%;
                         }
+                    }
+                }
+                figure {
+                    img {
+                        @extend .u-scale-1point2;
                     }
                 }
             }

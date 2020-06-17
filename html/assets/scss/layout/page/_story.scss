@@ -1,7 +1,95 @@
 // Blog page partial
 
-.c-blog {
-
+.c-stories {
+    &--grid {
+        @extend .u-oflowhidden;
+        &__item {
+            margin-bottom: $all-zero + 1;
+            height: $smallick-grid-height-100vh / 2;
+            @extend .u-width-100;
+            @extend .u-contarea-100;
+            @extend .u-display-block;
+            &:last-child {
+                @extend .u-no-bot-margin;
+            }
+            @include breakpoint(sm) {
+                float: left;
+                width: $smallick-grid-width-100 / 2.00260338439972;
+                height: $smallick-grid-height-100vh / 2;
+                &:nth-of-type(2n) {
+                    float: right;
+                }
+                &:nth-last-of-type(2) {
+                    margin-bottom: $all-zero;
+                }
+            }
+            @include breakpoint(md) {
+                width: $smallick-grid-width-100 / 2.002;
+            }
+            article {
+                @extend .u-height-100;
+                @extend .u-oflowhidden;
+                @extend .u-no-side-padding;
+                @extend .u-contarea-100__inner;
+                @include breakpoint(md) {
+                    width: $smallick-grid-width-100;
+                    max-width: $smallick-grid-width-100;
+                }
+                header {
+                    z-index: 2;
+                    left: $all-zero + 30;
+                    right: $all-zero + 30;
+                    bottom: $all-zero + 60;
+                    margin-top: $all-zero - 10;
+                    @extend .u-absolute;
+                    @include breakpoint(md) {
+                        left: calc(10% + 30px);
+                        right: calc(10% + 30px);
+                    }
+                    h3 {
+                        z-index: 4;
+                        @extend .u-relative;
+                        @extend .u-txtalign-left;
+                        @extend .u-no-bot-margin;
+                        &.c-title {
+                            &--suptxt {
+                                font-variant: none;
+                                span {
+                                    font-family: $headings-font-family;
+                                    margin-bottom: $all-zero + 10;
+                                    letter-spacing: $all-zero + 1;
+                                    @extend .u-txt-lowercase;
+                                }
+                            }
+                        }
+                    }
+                }
+                figure {
+                    z-index: 1;
+                    @extend .u-absolute;
+                    @extend .u-width-100;
+                    @extend .u-height-100;
+                    @extend .u-display-block;
+                    img {
+                        @extend .u-width-100;
+                        @extend .u-height-100;
+                        @extend .u-objfit-cover;
+                        @extend .u-display-block;
+                        @extend .u-obj-pos-center-middle;
+                    }
+                }
+            }
+            &:hover {
+                article {
+                    figure {
+                        img {
+                            @extend .u-scale-1point2;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
