@@ -78,6 +78,27 @@
                         @extend .u-obj-pos-center-middle;
                     }
                 }
+                .o-social {
+                    z-index: 4;
+                    left: $all-zero + 30;
+                    top: $all-zero + 40;
+                    @extend .u-absolute;
+                    @include breakpoint(md) {
+                        left: calc(10% + 30px);
+                        top: $all-zero + 60;
+                    }
+                    .c-social {
+                        font-size: $font-size-global;
+                        li {
+                            margin: $all-zero $all-zero + 9;
+                            a {
+                                svg {
+                                    width: $font-size-global + 1;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             &:hover {
                 article {

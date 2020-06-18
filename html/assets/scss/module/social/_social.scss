@@ -55,6 +55,22 @@
             }
         }
     }
+    &--white {
+        li {
+            a {
+                color: $white-rgba;
+                &:hover {
+                    color: rgba($white-rgba, 0.5);
+                    svg {
+                        fill: rgba($white-rgba, 0.5);
+                    }
+                }
+                svg {
+                    fill: $white-rgba;
+                }
+            }
+        }
+    }
 
     // positioned in home page / front page's header
     &--home {

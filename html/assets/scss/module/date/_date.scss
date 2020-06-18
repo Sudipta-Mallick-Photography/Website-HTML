@@ -1,0 +1,80 @@
+// Dates partial
+
+.c-date {
+
+
+    // date
+    &__date {
+        font-family: $acaslonpro-font-family;
+        font-size: $font-size-global * 3.5;
+        line-height: $font-size-global * 2.5;
+        @include breakpoint(md) {
+            font-size: $font-size-global * 4.5;
+            line-height: $font-size-global * 2.5;
+        }
+        &:after {
+            //@extend .u-width-100;
+            right: $all-zero;
+            bottom: $all-zero;
+            width: $smallick-grid-width-100;
+        }
+    }
+
+    // month
+    &__month {
+        margin-top: $all-zero + 2;
+        letter-spacing: $all-zero + 3;
+        font-family: $applesymbols-font-family;
+        @extend .u-txt-uppercase;
+    }
+
+    // year
+    &__year {
+        letter-spacing: $all-zero + 2;
+        font-weight: $weight-semibold;
+        font-size: $font-size-global + 4;
+        font-family: $acaslonpro-font-family;
+        line-height: $font-size-global * 1.5 - 2;
+        @include breakpoint(md) {
+            font-size: $font-size-global * 1.5;
+            line-height: $font-size-global * 1.5 + 2;
+        }
+    }
+
+    // positioned in story's archive page
+    &--archive {
+        z-index: 3;
+        top: $all-zero + 30;
+        right: $all-zero + 30;
+        @extend .u-absolute;
+        @include breakpoint(md) {
+            top: $all-zero + 60;
+            right: $all-zero + 40;
+        }
+        span {
+            @extend .u-relative;
+            @extend .u-display-block;
+            @extend .u-txtalign-right;
+        }
+    }
+
+    // positioned in story detail page
+    &--single {
+
+    }
+
+
+
+    // theme
+    &--light {
+        span {
+            color: rgba($white-rgba, 1);
+        }
+    }
+
+    &--dark {
+        span {
+            color: rgba($black-rgba, 0.8);
+        }
+    }
+}
