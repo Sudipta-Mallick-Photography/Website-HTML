@@ -127,6 +127,19 @@
         }
     }
 
+    // positioned in story section
+    &--storyitem {
+        font-size: $font-size-global;
+        li {
+            margin: $all-zero $all-zero + 9;
+            a {
+                svg {
+                    width: $font-size-global + 1;
+                }
+            }
+        }
+    }
+
     // positioned in overlay area
     &--ovrlay {
         bottom: $all-zero + 30;

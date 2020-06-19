@@ -8,7 +8,11 @@
             height: $smallick-grid-height-100vh / 2;
             @extend .u-width-100;
             @extend .u-contarea-100;
+            @extend .u-triangle-new;
             @extend .u-display-block;
+            @extend .u-triangle-new--under;
+            @extend .u-triangle-new--under__left;
+            @extend .u-triangle-new--under__left__dark;
             &:last-child {
                 @extend .u-no-bot-margin;
             }
@@ -39,10 +43,11 @@
                     z-index: 2;
                     left: $all-zero + 30;
                     right: $all-zero + 30;
-                    bottom: $all-zero + 60;
+                    bottom: $all-zero + 40;
                     margin-top: $all-zero - 10;
                     @extend .u-absolute;
                     @include breakpoint(md) {
+                        bottom: $all-zero + 60;
                         left: calc(10% + 30px);
                         right: calc(10% + 30px);
                     }
@@ -86,17 +91,6 @@
                     @include breakpoint(md) {
                         left: calc(10% + 30px);
                         top: $all-zero + 60;
-                    }
-                    .c-social {
-                        font-size: $font-size-global;
-                        li {
-                            margin: $all-zero $all-zero + 9;
-                            a {
-                                svg {
-                                    width: $font-size-global + 1;
-                                }
-                            }
-                        }
                     }
                 }
             }

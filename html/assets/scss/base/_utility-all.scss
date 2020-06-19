@@ -237,6 +237,27 @@
     position: fixed;
 }
 
+// only values
+.u-top-0 {
+    top: $all-zero;
+}
+.u-bot-0 {
+    bottom: $all-zero;
+}
+.u-left-0 {
+    left: $all-zero;
+}
+.u-right-0 {
+    right: $all-zero;
+}
+.u-all-0 {
+    @extend .u-bot-0;
+    @extend .u-left-0;
+    @extend .u-right-0;
+    @extend .u-top-0;
+}
+
+
 
 // overflow
 .u-oflowhidden {
@@ -518,6 +539,127 @@
         @extend .u-relative;
     }
 }
+
+
+
+// new triangle
+.u-triangle-new {
+    @extend .u-relative;
+    @extend .u-transition-500;
+    &:before,
+    &:after {
+        z-index: 1;
+        content: "";
+        width: $all-zero;
+        height: $all-zero;
+        @extend .u-absolute;
+        @extend .u-transition-500;
+    }
+
+    // positioned on top
+    &--over {
+        &:before {
+            @extend .u-top-0;
+        }
+
+        // positioned on top left
+        &__left {
+            &:before {
+                @extend .u-left-0;
+            }
+        }
+
+        // positioned on top right
+        &__right {
+            &:before {
+                @extend .u-right-0;
+            }
+        }
+    }
+
+    // positioned on bottom
+    &--under {
+        &:after {
+            @extend .u-bot-0;
+        }
+
+        // positioned on bottom left
+        &__left {
+            &:after {
+                border-bottom-style: solid;
+                border-bottom-width: $all-zero + 50;
+                border-right: $all-zero + 50 solid transparent;
+                @extend .u-left-0;
+                &:hover {
+                    &:after {
+                        border-bottom-width: $all-zero + 200;
+                        border-right: $all-zero + 200 solid transparent;
+                    }
+                }
+            }
+            // inner theme
+            &__light {
+                &:after {
+                    border-bottom-color: rgba($white-rgba, 0);
+                }
+                &:hover {
+                    &:after {
+                        border-bottom-color: rgba($white-rgba, 0.5);
+                    }
+                }
+            }
+
+            &__dark {
+                &:after {
+                    border-bottom-color: rgba($black-rgba, 0);
+                }
+                &:hover {
+                    &:after {
+                        border-bottom-width: $all-zero + 200;
+                        border-bottom-color: rgba($black-rgba, 0.8);
+                        border-right: $all-zero + 200 solid transparent;
+                        @include breakpoint(md) {
+                            border-bottom-width: $all-zero + 250;
+                            border-right: $all-zero + 250 solid transparent;
+                        }
+                        @include breakpoint(lg) {
+                            border-bottom-width: $all-zero + 300;
+                            border-right: $all-zero + 300 solid transparent;
+                        }
+                        @include breakpoint(xlg) {
+                            border-bottom-width: $all-zero + 350;
+                            border-right: $all-zero + 350 solid transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        // positioned on bottom right
+        &__right {
+            &:after {
+                @extend .u-right-0;
+            }
+        }
+    }
+
+
+    // theme
+    &--light {
+        &:before,
+        &:after {
+            //border-color: $white-rgba;
+        }
+    }
+
+    &--dark {
+        &:before,
+        &:after {
+            //border-color: $black-rgba;
+        }
+    }
+}
+
 
 
 // container

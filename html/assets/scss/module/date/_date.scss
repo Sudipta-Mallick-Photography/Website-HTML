@@ -1,7 +1,7 @@
 // Dates partial
 
 .c-date {
-
+    // @extend .u-oflowhidden;
 
     // date
     &__date {
@@ -44,7 +44,7 @@
     // positioned in story's archive page
     &--archive {
         z-index: 3;
-        top: $all-zero + 30;
+        top: $all-zero + 40;
         right: $all-zero + 30;
         @extend .u-absolute;
         @include breakpoint(md) {
