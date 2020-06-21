@@ -49,7 +49,7 @@
         @extend .u-absolute;
         @include breakpoint(md) {
             top: $all-zero + 60;
-            right: $all-zero + 40;
+            right: calc(10% + 30px);
         }
         span {
             @extend .u-relative;

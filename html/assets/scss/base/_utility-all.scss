@@ -616,7 +616,7 @@
                 &:hover {
                     &:after {
                         border-bottom-width: $all-zero + 200;
-                        border-bottom-color: rgba($black-rgba, 0.8);
+                        border-bottom-color: rgba($black-rgba, 0.7);
                         border-right: $all-zero + 200 solid transparent;
                         @include breakpoint(md) {
                             border-bottom-width: $all-zero + 250;

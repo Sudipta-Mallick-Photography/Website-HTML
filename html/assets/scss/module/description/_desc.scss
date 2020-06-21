@@ -86,5 +86,40 @@
             }
         }
     }
+
+    // blockquote
+    &--blockquote {
+
+        // positioned at the single pages
+        &--single {
+            blockquote {
+                font-family: $font-family-headline;
+                padding: $all-zero !important;
+                padding-bottom: $font-size-global * 3 + 7 !important;
+                @extend .u-relative;
+                @extend .u-no-border;
+                @extend .u-no-margin;
+                //@extend .u-no-padding;
+                @extend .u-transparent;
+                margin-bottom: $font-size-global * 3 + 7 !important;
+                &:first-letter {
+                    font-size: $font-size-global * 4;
+                }
+                &:after {
+                    height: $all-zero + 1;
+                    width: $font-size-global * 15;
+                    @extend .u-bot-0;
+                    @extend .u-left-0;
+                    @extend .u-absolute;
+                }
+                @include breakpoint(lg) {
+                    letter-spacing: $all-zero + 2;
+                    padding-bottom: $font-size-global * 5 - 5 !important;
+                    margin-bottom: $font-size-global * 3 + 7 !important;
+                }
+            }
+        }
+
+    }
 }
 
