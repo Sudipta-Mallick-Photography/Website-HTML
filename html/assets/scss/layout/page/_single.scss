@@ -1,7 +1,106 @@
 // Blog page partial
 
-.c-blog {
+.o-sidebar {
 
+    // sidebar holder
+    &__holder {
+
+    }
+
+    // sidebar inner
+    &__inner {
+        padding: $font-size-global * 2 - 2 $all-zero;
+        //@extend .u-valign-middle;
+        @include breakpoint(sm) {
+            display: table;
+            margin: $all-zero auto;
+            width: $smallick-grid-width-100;
+        }
+
+        // sidebar widgets
+        > section {
+            @extend .u-width-100;
+            //@extend .u-valign-middle__inner;
+            @include breakpoint(sm) {
+                float: none;
+                display: table-cell;
+                vertical-align: middle;
+                width: $smallick-grid-width-100 / 3;
+            }
+
+            // widget title
+            .c-title {
+                @extend .u-txt-smallcaps;
+            }
+
+            // widget list
+            ul {
+                @extend .c-line;
+                @extend .c-line--under;
+                @extend .u-no-bot-margin;
+                li {
+                    @extend .u-display-in-block;
+                    a {
+
+                    }
+                }
+            }
+
+            // first
+            &:first-child {
+                padding-right: $font-size-global * 2.5;
+                height: $all-zero;
+                @extend %u-opacity-0;
+                //@extend .u-display-none;
+                @include breakpoint(sm) {
+                    //display: block;
+                    opacity: 1;
+                    height: auto;
+                }
+                ul {
+                    @extend .c-line--left;
+                    @extend .c-line--dark;
+                    li {
+                        margin-right: $all-zero + 5;
+                        @extend .u-display-in-block;
+                        a {
+
+                        }
+                    }
+                }
+            }
+
+            // middle
+            &:nth-of-type(2) {
+                @extend .u-txtalign-center;
+            }
+
+            // last
+            &:last-child {
+                padding-left: $font-size-global * 2.5;
+                height: $all-zero;
+                @extend .u-txtalign-right;
+                @extend %u-opacity-0;
+                //@extend .u-display-none;
+                @include breakpoint(sm) {
+                    //display: block;
+                    opacity: 1;
+                    height: auto;
+                }
+                ul {
+                    @extend .c-line--dark;
+                    @extend .c-line--right;
+                    @extend .u-txt-smallcaps;
+                    li {
+                        margin-left: $all-zero + 5;
+                        a {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 

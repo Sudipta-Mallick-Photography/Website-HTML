@@ -95,31 +95,86 @@
             blockquote {
                 font-family: $font-family-headline;
                 padding: $all-zero !important;
-                padding-bottom: $font-size-global * 3 + 7 !important;
+                padding-top: $font-size-global * 1.5 + 1 !important;
+                padding-bottom: $font-size-global * 2.5 !important;
                 @extend .u-relative;
                 @extend .u-no-border;
                 @extend .u-no-margin;
                 //@extend .u-no-padding;
                 @extend .u-transparent;
-                margin-bottom: $font-size-global * 3 + 7 !important;
-                &:first-letter {
-                    font-size: $font-size-global * 4;
-                }
+                margin-bottom: $font-size-global * 2.5 !important;
+
                 &:after {
+                    content: "";
                     height: $all-zero + 1;
-                    width: $font-size-global * 15;
+                    width: $font-size-global * 5;
                     @extend .u-bot-0;
                     @extend .u-left-0;
                     @extend .u-absolute;
                 }
+
+                @include breakpoint(md) {
+                    &:after {
+                        width: $font-size-global * 10;
+                    }
+                }
                 @include breakpoint(lg) {
                     letter-spacing: $all-zero + 2;
-                    padding-bottom: $font-size-global * 5 - 5 !important;
-                    margin-bottom: $font-size-global * 3 + 7 !important;
+                    padding-top: $font-size-global * 2.5 !important;
+                    padding-bottom: $font-size-global * 3.5 !important;
+                    margin-bottom: $font-size-global * 3.5 !important;
+                    &:after {
+                        width: $font-size-global * 15;
+                    }
                 }
             }
         }
 
+
+        // large first letter
+        &--frstletterlarge {
+            blockquote {
+                &:first-letter {
+                    font-size: $font-size-global * 3;
+                    @include breakpoint(lg) {
+                        font-size: $font-size-global * 4;
+                    }
+                }
+            }
+        }
+
+        // theme
+
+        // dark
+        &--dark {
+            blockquote {
+                &:after {
+                    background-color: rgba($black-rgba, 0.8);
+                }
+            }
+        }
+
+        // light
+        &--light {
+            blockquote {
+                &:after {
+                    background-color: rgba($white-rgba, 0.8);
+                }
+            }
+        }
+    }
+
+    // image
+    figure {
+        margin-top: $font-size-global * 2.5;
+        margin-bottom: $font-size-global * 2.5;
+        figcaption {
+            color: rgba($white-rgba, 1);
+            margin-top: $font-size-global * 1.5;
+            padding: $all-zero + 5 $all-zero + 10;
+            background-color: rgba($black-rgba, 0.9);
+            @extend .u-display-in-block;
+        }
     }
 }
 

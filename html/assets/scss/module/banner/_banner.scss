@@ -16,6 +16,12 @@
                 height: $smallick-grid-height-100vh / 2.857142;
                 margin-top: $smallick-grid-height-100vh / 4;
             }
+            &--inrpagefulhght {
+                @include breakpoint(sm) {
+                    margin-top: $all-zero;
+                    height: $smallick-grid-height-100vh;
+                }
+            }
         }
 
         &__inner {

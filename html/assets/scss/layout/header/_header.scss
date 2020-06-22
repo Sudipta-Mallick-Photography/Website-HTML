@@ -51,6 +51,8 @@
             }
         }
     }
+
+    // positioned on front page / home page
     &--frontpage {
         .c-brand {
             @include breakpoint(sm) {
@@ -58,9 +60,19 @@
             }
         }
     }
+
+    // positioned on special inner pages, whose header height is fixed
     &--innrpagespcl {
         @include breakpoint(sm) {
             height: auto;
+        }
+    }
+
+    // positioned on special inner pages, whose header height is equal to browser height and brand section is transparent
+    &--innrpagefullheight {
+        @extend .o-header--frontpage;
+        @include breakpoint(sm) {
+            height: $smallick-grid-height-100vh;
         }
     }
 }

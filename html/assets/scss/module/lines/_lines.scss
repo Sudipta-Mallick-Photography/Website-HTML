@@ -114,6 +114,11 @@
                 @extend .u-right-0;
             }
         }
+        &--middle {
+            &:before {
+                @extend .u-translate-x50;
+            }
+        }
         &--stretched {
             &:before {
                 @extend .u-left-0;
@@ -146,6 +151,11 @@
         &--right {
             &:after {
                 @extend .u-right-0;
+            }
+        }
+        &--middle {
+            &:after {
+                @extend .u-translate-x50;
             }
         }
         &--stretched {

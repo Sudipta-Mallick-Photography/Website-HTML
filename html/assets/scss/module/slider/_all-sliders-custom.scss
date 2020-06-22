@@ -184,7 +184,7 @@
         &.swiper-pagination-bullets {
             @extend .slick-dots;
             z-index: 2;
-            bottom: $all-zero + 20;
+            bottom: $all-zero + 20 !important;
             span {
                 &.swiper-pagination-bullet {
                     border-radius: $all-zero;
