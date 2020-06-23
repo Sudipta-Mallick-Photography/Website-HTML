@@ -171,9 +171,12 @@
         figcaption {
             color: rgba($white-rgba, 1);
             margin-top: $font-size-global * 1.5;
-            padding: $all-zero + 5 $all-zero + 10;
+            padding: $all-zero + 10;
             background-color: rgba($black-rgba, 0.9);
             @extend .u-display-in-block;
+            @include breakpoint(md) {
+                padding: $all-zero + 5 $all-zero + 10;
+            }
         }
     }
 }

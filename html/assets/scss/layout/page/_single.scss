@@ -1,7 +1,10 @@
 // Blog page partial
 
 .o-sidebar {
-
+    border-top: $all-zero + 1 solid $white-rgba-solid-darken-50;
+    @include breakpoint(sm) {
+        border: none;
+    }
     // sidebar holder
     &__holder {
 
@@ -29,9 +32,39 @@
             }
 
             // widget title
+
             .c-title {
                 @extend .u-txt-smallcaps;
             }
+
+            h2 {
+                font-size: $font-size-global * 1.5 - 2;
+                margin-bottom: $font-size-global * 1.5 + 1;
+                @include breakpoint(sm) {
+                    font-size: $font-size-global * 1.5;
+                }
+                @include breakpoint(md) {
+                    font-size: $font-size-global * 1.5 + 2;
+                }
+                @include breakpoint(lg) {
+                    font-size: $font-size-global * 1.5 + 4;
+                }
+            }
+
+            h3 {
+                font-size: $font-size-global * 1.5 - 4;
+                margin-bottom: $font-size-global * 1.5;
+                @include breakpoint(sm) {
+                    font-size: $font-size-global * 1.5 - 2;
+                }
+                @include breakpoint(md) {
+                    font-size: $font-size-global * 1.5;
+                }
+                @include breakpoint(lg) {
+                    font-size: $font-size-global * 1.5 + 2;
+                }
+            }
+
 
             // widget list
             ul {
@@ -41,8 +74,16 @@
                 li {
                     @extend .u-display-in-block;
                     a {
-
+                        &:before {
+                            @extend .u-bot-0;
+                            @include breakpoint(md) {
+                                bottom: $all-zero;
+                            }
+                        }
                     }
+                }
+                @include breakpoint(md) {
+                    letter-spacing: $all-zero + 1;
                 }
             }
 
@@ -73,6 +114,11 @@
             // middle
             &:nth-of-type(2) {
                 @extend .u-txtalign-center;
+                .c-title {
+                    &:after {
+                        bottom: $all-zero - 10;
+                    }
+                }
             }
 
             // last
@@ -96,6 +142,105 @@
                         a {
 
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    // bottom sidebar
+    &--bottom {
+
+        // bottom sidebar inner
+        &__inner {
+
+            > section {
+                margin-bottom: $font-size-global * 2 - 2;
+                .c-title {
+                    &:after {
+                        bottom: $all-zero - 10;
+                    }
+                }
+                @include breakpoint(sm) {
+                    margin-bottom: $all-zero;
+                    .c-title {
+                        &:after {
+                            bottom: $all-zero;
+                        }
+                    }
+                }
+
+
+                &:first-child,
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:last-child {
+                    ul {
+                        @extend .c-line--dark;
+                        @extend .c-line--left;
+                        letter-spacing: $all-zero + 1;
+                        li {
+                            margin-right: $all-zero + 5;
+                        }
+                    }
+                }
+
+                // first
+                &:first-child {
+                    height: auto;
+                    padding-right: $all-zero;
+                    @extend %u-opacity-1;
+                    @include breakpoint(sm) {
+                        padding-right: $font-size-global * 2.5;
+                    }
+                }
+
+                // 2nd and 3rd item
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                    height: auto;
+                    @extend %u-opacity-1;
+                    @extend .u-display-block;
+                    @extend .u-txtalign-left;
+                    @include breakpoint(sm) {
+                        opacity: 0;
+                        display: none;
+                        height: $all-zero;
+                    }
+                }
+
+                // 3rd
+                &:nth-of-type(3) {
+                    ul {
+                        @extend .u-txt-smallcaps;
+                    }
+                }
+
+                // share this post
+                &:nth-of-type(4) {
+                    @extend .u-txtalign-center;
+                    .c-title {
+                        &:after {
+                            bottom: $all-zero - 10;
+                        }
+                    }
+                    a {
+                        &:before {
+                            @extend .u-display-none;
+                        }
+                    }
+                }
+
+                // last
+                &:last-child {
+                    height: auto;
+                    text-align: center !important;
+                    padding-left: $all-zero;
+                    @extend %u-opacity-1;
+                    //@extend .u-txtalign-center;
+                    @include breakpoint(sm) {
+                        text-align: right !important;
+                        padding-left: $font-size-global * 2.5;
                     }
                 }
             }
