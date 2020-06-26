@@ -1,67 +1,20 @@
 // Common section partial
 
-// common donate box area
-.o-donate-area {
-    @extend .u-oflowhidden;
-}
-.o-donate-box {
-    //margin-top: $all-zero + 30;
-    margin-right: $all-zero;
-    margin-left: $all-zero;
-    z-index: 6;
-    @extend .u-relative;
-    @extend .u-bg-norepeat;
-    @extend .u-bg-pos-center-middle;
-    @extend .u-bg-cover;
-    @include breakpoint(md) {
-        //margin-top: $all-zero + 60;
-    }
-    h2 {
-        //@extend .u-no-bot-margin;
-        font-weight: $weight-bold;
-        margin-bottom: $all-zero + 25;
-    }
-    h3 {
-        @extend .u-no-top-margin;
-    }
-    &__inner {
-        z-index: 6;
-        @extend .u-relative;
-        section {
-            padding: $all-zero + 30 $all-zero;
-            width: $smallick-grid-width-100;
-            @extend .u-block-elm-center;
-            @extend .u-display-block;
-            @extend .u-txtalign-center;
-            @include breakpoint(xxs) {
-                padding: $all-zero + 30;
-            }
+.o-whole {
+
+
+    // positioned on contact page only
+    &--contact {
+        .o-content {
             @include breakpoint(md) {
-                display: table;
-                padding: $all-zero;
-                text-align: left;
-            }
-        }
-    }
-    &__left,
-    &__right {
-        //@extend .u-valign-middle-inner;
-        //@extend .u-no-float;
-        @include breakpoint(md) {
-            display: table-cell;
-            float: none;
-            vertical-align: middle;
-        }
-    }
-    &__left {
-        &__inner {
-            padding: $all-zero $all-zero $all-zero + 25;
-            @include breakpoint(md) {
-                padding: $all-zero + 70 $all-zero $all-zero + 60 $all-zero + 25;
+                display: none;
             }
         }
     }
 }
+
+
+
 
 
 

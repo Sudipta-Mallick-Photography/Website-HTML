@@ -106,6 +106,13 @@
         .c-title {
             @extend .u-no-bot-margin;
         }
+        &--contactpageonly {
+            z-index: 1;
+            height: auto;
+            bottom: $all-zero + 32;
+            background-color: transparent !important;
+            @extend .u-absolute;
+        }
     }
 
     // page type

@@ -75,4 +75,12 @@
             height: $smallick-grid-height-100vh;
         }
     }
+
+    // positioned on contact page only
+    &--contactpageonly {
+        @extend .o-header--frontpage;
+        @include breakpoint(md) {
+            height: $smallick-grid-height-100vh / 1.25;
+        }
+    }
 }
