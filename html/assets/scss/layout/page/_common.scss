@@ -6,8 +6,16 @@
     // positioned on contact page only
     &--contact {
         .o-content {
-            @include breakpoint(md) {
+            @include breakpoint(sm) {
                 display: none;
+            }
+        }
+        @include breakpoint(md) {
+            .c-footer {
+                &__inner {
+                    padding: $all-zero !important;
+                    height: $smallick-grid-height-100vh / 5;
+                }
             }
         }
     }

@@ -140,6 +140,23 @@
         }
     }
 
+
+    // positioned in contact page only
+    &--contatpageonly {
+        @extend .u-display-block;
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+
+    // positioned in the follow me section of contact page only
+    &--follow-me {
+        @extend .c-social--storyitem;
+        right: $all-zero;
+        bottom: $all-zero - 30;
+    }
+
+
     // positioned in overlay area
     &--ovrlay {
         bottom: $all-zero + 30;

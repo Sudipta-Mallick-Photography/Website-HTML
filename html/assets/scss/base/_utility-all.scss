@@ -534,6 +534,13 @@
             background-color: $white-rgba;
         }
     }
+    &--opacity-black {
+        &--zer04 {
+            &:before {
+                background-color: rgba($black-rgba, 0.4);
+            }
+        }
+    }
     &__inner {
         z-index: 2;
         @extend .u-relative;

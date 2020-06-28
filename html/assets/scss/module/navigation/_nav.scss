@@ -67,6 +67,17 @@
                 }
             }
         }
+
+        // 2ndary nav menu special
+        &--special {
+            @extend .u-no-bot-margin;
+            @include breakpoint(sm) {
+                z-index: 2;
+                top: inherit !important;
+                bottom: $all-zero + 32;
+                // top: $all-zero + 180 !important;
+            }
+        }
     }
 
     // for home page / front page

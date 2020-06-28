@@ -40,6 +40,71 @@
         &__inner {
             @extend .u-height-100;
         }
+
+        // positioned on contact page only
+        &__contact {
+            @extend .u-absolute;
+            @extend .u-display-none;
+            z-index: 3;
+            right: $all-zero + 30;
+            bottom: $all-zero + 60;
+            width: $smallick-grid-width-100 / 2.5;
+            @include breakpoint(sm) {
+                display: block;
+            }
+            @include breakpoint(md) {
+                bottom: $all-zero + 50;
+            }
+            @include breakpoint(lg) {
+                bottom: $all-zero + 90;
+            }
+            &__inner {
+                @extend .u-relative;
+                section {
+                    margin-bottom: $all-zero + 15;
+                    @extend .u-txtalign-right;
+                    @include breakpoint(lg) {
+                        margin-bottom: $all-zero + 20;
+                        &:after {
+                            width: $all-zero + 2;
+                        }
+                    }
+                    h5,
+                    h4 {
+                        &.c-title {
+                            letter-spacing: $all-zero + 1;
+                        }
+                    }
+                    h5 {
+                        @extend .u-no-top-margin;
+                        @extend .u-no-bot-margin;
+                    }
+                    h4 {
+
+                    }
+                    p {
+                        color: $white-rgba;
+                        font-family: $headings-font-family;
+                        @extend .u-no-bot-margin;
+                    }
+                    &.c-contact__cred {
+                        a {
+                            color: rgba($white-rgba, 0.8);
+                            font-family: $headings-font-family;
+                            &:before {
+                                @extend .u-bot-0;
+                                @include breakpoint(lg) {
+                                    bottom: $all-zero + 3 !important;
+                                }
+                            }
+                            &:hover {
+                                color: rgba($white-rgba, 1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
