@@ -151,11 +151,25 @@
     // bottom sidebar
     &--bottom {
 
+        // bottom sidebar holder
+        &__holder {
+            @extend .u-no-side-padding;
+            @include breakpoint(sm) {
+                padding: $all-zero $container-padding;
+            }
+        }
+
         // bottom sidebar inner
         &__inner {
+            //@extend .u-no-padding;
+            padding: $all-zero !important;
+            @include breakpoint(sm) {
+                padding: $font-size-global * 2 - 2 $all-zero !important;
+            }
 
             > section {
-                margin-bottom: $font-size-global * 2 - 2;
+                //margin-bottom: $font-size-global * 2 - 2;
+                padding: $font-size-global * 2 + 3 $font-size-global * 2 - 2;
                 .c-title {
                     &:after {
                         bottom: $all-zero - 10;
@@ -163,6 +177,7 @@
                 }
                 @include breakpoint(sm) {
                     margin-bottom: $all-zero;
+                    padding: $all-zero;
                     .c-title {
                         &:after {
                             bottom: $all-zero;
@@ -188,7 +203,7 @@
                 // first
                 &:first-child {
                     height: auto;
-                    padding-right: $all-zero;
+                    // padding-right: $all-zero;
                     @extend %u-opacity-1;
                     @include breakpoint(sm) {
                         padding-right: $font-size-global * 2.5;
@@ -235,7 +250,7 @@
                 &:last-child {
                     height: auto;
                     text-align: center !important;
-                    padding-left: $all-zero;
+                    // padding-left: $all-zero;
                     @extend %u-opacity-1;
                     //@extend .u-txtalign-center;
                     @include breakpoint(sm) {
@@ -243,6 +258,34 @@
                         padding-left: $font-size-global * 2.5;
                     }
                 }
+            }
+
+            .c-category {
+                padding-bottom: $all-zero;
+            }
+
+            .c-archive {
+                padding-bottom: $font-size-global * 2 + 3;
+                @include breakpoint(sm) {
+                    padding-bottom: $all-zero;
+                }
+            }
+
+            .c-category,
+            .c-archive,
+            .c-date {
+                background-color: rgba($white-rgba, 0.1);
+                @include breakpoint(sm) {
+                    background-color: transparent;
+                }
+            }
+
+            .c-stayintuch {
+
+            }
+
+            .c-date {
+
             }
         }
     }

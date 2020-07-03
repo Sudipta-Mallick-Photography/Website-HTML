@@ -61,6 +61,11 @@
     // positioned in story detail page
     &--single {
 
+        .c-date__month,
+        .c-date__year{
+            @extend .u-display-block;
+        }
+
     }
 
 
