@@ -61,11 +61,33 @@
     // positioned in story detail page
     &--single {
 
-        .c-date__month,
-        .c-date__year{
-            @extend .u-display-block;
-        }
+        &__inner {
+            //@extend .u-txtalign-center;
+            div {
+                margin-top: $font-size-global * 2 - 2;
+                @extend .u-txtalign-left;
+                @extend .u-display-in-block;
+                @extend .u-txt-valign-middle;
+                @include breakpoint(md) {
+                    margin-top: $font-size-global * 3 - 3;
+                }
+            }
+            .c-date__date {
+                margin-right: $font-size-global - 1;
+                line-height: $smallick-grid-height-100;
+                @extend .u-display-in-block;
+                @extend .u-txt-valign-middle;
+                &:after {
+                    width: $all-zero + 1;
+                }
+            }
 
+            .c-date__month,
+            .c-date__year{
+                @extend .u-txtalign-left;
+                @extend .u-display-block;
+            }
+        }
     }
 
 

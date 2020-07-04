@@ -89,7 +89,6 @@
 
             // first
             &:first-child {
-                padding-right: $font-size-global * 2.5;
                 height: $all-zero;
                 @extend %u-opacity-0;
                 //@extend .u-display-none;
@@ -97,6 +96,7 @@
                     //display: block;
                     opacity: 1;
                     height: auto;
+                    padding-right: $font-size-global * 2.5;
                 }
                 ul {
                     @extend .c-line--left;
@@ -123,7 +123,6 @@
 
             // last
             &:last-child {
-                padding-left: $font-size-global * 2.5;
                 height: $all-zero;
                 @extend .u-txtalign-right;
                 @extend %u-opacity-0;
@@ -132,6 +131,7 @@
                     //display: block;
                     opacity: 1;
                     height: auto;
+                    padding-left: $font-size-global * 2.5;
                 }
                 ul {
                     @extend .c-line--dark;
