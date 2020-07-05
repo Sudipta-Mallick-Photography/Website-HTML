@@ -291,6 +291,55 @@
     }
 }
 
-
+// stories navigation
+.c-story-nav {
+    background-color: rgba($black-rgba, 1);
+    border-bottom: $all-zero + 1 solid $white-rgba-solid-darken-50;
+    @extend .u-oflowhidden;
+    @include breakpoint(sm) {
+        border: none;
+        background-color: rgba($black-rgba, 0.9);
+    }
+    &__item {
+        width: $smallick-grid-width-100 / 2.5;
+        @extend .u-display-block;
+        @extend .u-txt-valign-middle;
+        a {
+            // color: $white-rgba;
+            @extend .u-display-block;
+            &:last-child {
+                letter-spacing: $all-zero + 1;
+                font-size: $font-size-global + 4;
+                margin-top: $font-size-global + 4;
+                font-family: $headings-font-family;
+                line-height: $font-size-global + 4;
+            }
+        }
+        figure {
+            width: $smallick-grid-width-100;
+            height: $font-size-global * 6 + 4;
+            @extend .u-display-block;
+            img {
+                @extend .u-width-100;
+                @extend .u-height-100;
+                @extend .u-objfit-cover;
+                @extend .u-display-block;
+                @extend .u-obj-pos-center-middle;
+            }
+        }
+    }
+    &__prev {
+        @extend .u-float-left;
+        a {
+            @extend .u-txtalign-right;
+        }
+    }
+    &__next {
+        @extend .u-float-right;
+        a {
+            @extend .u-txtalign-left;
+        }
+    }
+}
 
 
