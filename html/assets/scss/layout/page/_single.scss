@@ -300,8 +300,35 @@
         border: none;
         background-color: rgba($black-rgba, 0.9);
     }
+
+    &__inner {
+        @extend .u-relative;
+        @extend .u-oflowhidden;
+        @extend .u-cmn-padding;
+        &:before {
+            content: "";
+            width: $all-zero + 1;
+            height: $font-size-global * 4 + 1;
+            top: $font-size-global * 3 + 7;
+            background-color: rgba($white-rgba, 0.6);
+            @extend .u-absolute;
+            @extend .u-translate-x50;
+        }
+        @include breakpoint(sm) {
+            &:before {
+                height: $font-size-global * 7.5;
+            }
+        }
+        @include breakpoint(lg) {
+            &:before {
+                top: $font-size-global * 5 - 5;
+            }
+        }
+    }
+
     &__item {
         width: $smallick-grid-width-100 / 2.5;
+        @extend .u-relative;
         @extend .u-display-block;
         @extend .u-txt-valign-middle;
         a {
@@ -317,7 +344,7 @@
         }
         figure {
             width: $smallick-grid-width-100;
-            height: $font-size-global * 6 + 4;
+            height: $font-size-global * 4 + 1;
             @extend .u-display-block;
             img {
                 @extend .u-width-100;
@@ -327,17 +354,87 @@
                 @extend .u-obj-pos-center-middle;
             }
         }
+        &:before {
+            content: "";
+            bottom: $all-zero + 10;
+            width: $font-size-global + 4;
+            height: $font-size-global + 4;
+            //@extend .u-bot-0;
+            @extend .u-absolute;
+            @extend .u-bg-cover;
+            @extend .u-bg-norepeat;
+            //@extend .u-translate-y50;
+        }
+        @include breakpoint(sm) {
+            //width: $smallick-grid-width-100 / 2.5;
+            a {
+                &:last-child {
+                    position: absolute;
+                    margin-top: $all-zero;
+                    letter-spacing: $all-zero + 2;
+                    top: $smallick-grid-width-100 / 2;
+                    padding: $all-zero + 10 $all-zero + 20;
+                    background-color: rgba($black-rgba, 0.2);
+                    @include translateY(-$smallick-grid-width-100 / 2);
+                    br {
+                        display: none;
+                    }
+                }
+            }
+            figure {
+                width: $smallick-grid-width-100 / 2;
+                height: $font-size-global * 7.5;
+            }
+            &:before {
+                bottom: inherit;
+                width: $font-size-global * 2 - 2;
+                height: $font-size-global * 2 - 2;
+                top: $smallick-grid-width-100 / 2;
+                @include translateY(-$smallick-grid-width-100 / 2);
+            }
+        }
     }
     &__prev {
         @extend .u-float-left;
         a {
             @extend .u-txtalign-right;
+            &:last-child {
+            }
+        }
+        &:before {
+            background-image: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny4xNzUgNDc3LjE3NSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3LjE3NSA0NzcuMTc1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNMTQ1LjE4OCwyMzguNTc1bDIxNS41LTIxNS41YzUuMy01LjMsNS4zLTEzLjgsMC0xOS4xcy0xMy44LTUuMy0xOS4xLDBsLTIyNS4xLDIyNS4xYy01LjMsNS4zLTUuMywxMy44LDAsMTkuMWwyMjUuMSwyMjUgICBjMi42LDIuNiw2LjEsNCw5LjUsNHM2LjktMS4zLDkuNS00YzUuMy01LjMsNS4zLTEzLjgsMC0xOS4xTDE0NS4xODgsMjM4LjU3NXoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+            @extend .u-left-0;
+
+        }
+        @include breakpoint(sm) {
+            figure {
+               float: right;
+            }
+            a {
+                &:last-child {
+                    left: $smallick-grid-width-100 / 5;
+                }
+            }
         }
     }
     &__next {
         @extend .u-float-right;
         a {
             @extend .u-txtalign-left;
+            &:last-child {
+            }
+        }
+        &:before {
+            background-image: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ny4xNzUgNDc3LjE3NSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc3LjE3NSA0NzcuMTc1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNMzYwLjczMSwyMjkuMDc1bC0yMjUuMS0yMjUuMWMtNS4zLTUuMy0xMy44LTUuMy0xOS4xLDBzLTUuMywxMy44LDAsMTkuMWwyMTUuNSwyMTUuNWwtMjE1LjUsMjE1LjUgICBjLTUuMyw1LjMtNS4zLDEzLjgsMCwxOS4xYzIuNiwyLjYsNi4xLDQsOS41LDRjMy40LDAsNi45LTEuMyw5LjUtNGwyMjUuMS0yMjUuMUMzNjUuOTMxLDI0Mi44NzUsMzY1LjkzMSwyMzQuMjc1LDM2MC43MzEsMjI5LjA3NXogICAiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+            @extend .u-right-0;
+
+        }
+        @include breakpoint(sm) {
+            a {
+                &:last-child {
+                    right: $smallick-grid-width-100 / 5;
+                }
+            }
         }
     }
 }
