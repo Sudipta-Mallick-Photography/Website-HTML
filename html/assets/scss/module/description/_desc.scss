@@ -131,6 +131,40 @@
         }
 
 
+        &--biosec {
+            @extend .c-desc--blockquote--single;
+            blockquote,
+            figure {
+                @include breakpoint(md) {
+                    // display: table-cell;
+                    // vertical-align: top;
+                }
+            }
+            blockquote {
+                @include breakpoint(md) {
+                    float: left;
+                    width: $smallick-grid-width-100 / 1.8181;
+                }
+            }
+            figure {
+                margin-top: $font-size-global * 3 + 2 !important;
+                @include breakpoint(md) {
+                    float: right;
+                    height: $font-size-global * 20;
+                    width: $smallick-grid-width-100 / 2.5;
+                    img {
+                        object-fit: cover;
+                        height: $smallick-grid-height-100;
+                        object-position: $smallick-grid-width-100 / 2;
+                    }
+                }
+                @include breakpoint(lg) {
+
+                }
+            }
+        }
+
+
         // large first letter
         &--frstletterlarge {
             blockquote {
